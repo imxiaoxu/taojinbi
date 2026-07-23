@@ -22,7 +22,7 @@
 | `dashboard/index.html` | 本地实验看板，含 Agent 决策树、全量回放分布和七阶段 Pipeline 测试 |
 | `deployment/render_backend/` | 可部署到 Render 的 Agent 与端到端 Pipeline Mock API |
 | `deployment/build_cloudflare.mjs` | 生成 Cloudflare Pages 静态发布目录 |
-| `deployment/导师测试与Cloudflare_Render部署指南.md` | 导师测试方法、部署步骤、边界和验收标准 |
+| `deployment/在线测试与Cloudflare_Render部署指南.md` | 在线测试方法、部署步骤、边界和验收标准 |
 | `deployment/public_smoke_test.mjs` | 对最终 Render 与 Cloudflare 地址执行 18 项公网验收 |
 | `08_独立复现验证.md` | 在无Week5相邻目录环境中的隔离复现记录 |
 | `09_公网部署执行清单.md` | GitHub、Render、Cloudflare 的一次性发布和最终链接验收 |
@@ -70,7 +70,7 @@ cd deployment/render_backend
 npm run dev
 ```
 
-浏览器打开 `http://127.0.0.1:8787/demo/`。公网部署按 `deployment/导师测试与Cloudflare_Render部署指南.md` 执行。
+浏览器打开 `http://127.0.0.1:8787/demo/`。公网地址为 <https://coin-game-agent-sandbox.pages.dev>，部署与验收按 `deployment/在线测试与Cloudflare_Render部署指南.md` 执行。
 
 完整 Pipeline 测试接口为 `POST /api/v1/pipeline/test`，最近 200 条临时链路审计可通过 `GET /api/v1/pipeline/audit` 查看。四个实验扩展接口也已提供内存 Mock；生产接入仍需替换为真实实验平台、业务工具和数仓服务。
 

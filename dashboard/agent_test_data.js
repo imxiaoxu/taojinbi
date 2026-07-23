@@ -1,7 +1,7 @@
 window.AGENT_TEST_DATA = {
   "meta": {
     "source": "synthetic_full_agent_replay",
-    "generated_at": "2026-07-23T16:48:27+08:00",
+    "generated_at": "2026-07-23T20:39:49+08:00",
     "scope": "8,100 synthetic users; Mock tools only"
   },
   "kpis": [
@@ -123,7 +123,7 @@ window.AGENT_TEST_DATA = {
     }
   },
   "summary": {
-    "generated_at": "2026-07-23T16:48:27+08:00",
+    "generated_at": "2026-07-23T20:39:49+08:00",
     "test_type": "full_synthetic_agent_decision_replay",
     "test_boundary": "Mock Agent and Mock tools only; not a business uplift experiment.",
     "source_directory": "synthetic_data/generated",
