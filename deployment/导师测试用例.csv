@@ -1,0 +1,11 @@
+case_id,场景,关键输入,预期scene,预期动作或状态,验收重点
+T01,standard Level 2首次失败,standard|level_id=2|fail_count=1,level_2_block,show_tutorial|switch_guided_mode|reduce_difficulty,核心路径
+T02,其他关卡连续失败,easy_mode|level_id=3|fail_count=2,continuous_failure,show_tutorial|grant_coin_compensation,优先级与连续失败
+T03,Android加载性能风险,Android|page_load_time_ms=3600,android_perf_risk,show_perf_tip|reduce_animation,性能场景
+T04,7日加购未下单,add_to_cart=true|order=false|coupon=2,cart_without_order,explain_coin_value|coupon_reminder|show_recommendation,交易辅助场景
+T05,新用户首局,is_new_game_user=true|game_start,new_user_first_game,show_tutorial,冷启动场景
+T06,无需干预,无命中条件,no_action,no_action,避免过度干预
+T07,会话频控拦截,intervention_count=1|max=1,level_2_block,no_action|session_frequency_limit,Guardrail
+T08,教程工具超时,tutorial_service_timeout=true,level_2_block,fallback|show_static_hint,失败兜底
+T09,Agent决策引擎异常,simulate_agent_crash=true,system_fallback,degraded|show_static_hint,决策服务故障兜底
+T10,端到端Pipeline,force_group=agent|level2_first_fail,level_2_block,7 stages|warehouse_record|mock_only=true,完整链路与数据回流

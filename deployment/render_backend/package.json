@@ -1,0 +1,14 @@
+{
+  "name": "coin-game-agent-sandbox-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node app.mjs",
+    "dev": "HOST=127.0.0.1 node app.mjs",
+    "test": "node smoke_test.mjs"
+  }
+}

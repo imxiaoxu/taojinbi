@@ -1,0 +1,56 @@
+{
+  "purpose": "Synthetic data for local Agent, A/B and dashboard pipeline tests only; not business evidence.",
+  "seed": 20260716,
+  "users_per_group": 2700,
+  "groups": [
+    "holdout",
+    "fixed_rule",
+    "agent"
+  ],
+  "assumptions": {
+    "level_2_start_rate": 0.75,
+    "level_2_final_pass_rate": {
+      "holdout": 0.4915,
+      "fixed_rule": 0.54,
+      "agent": 0.565
+    },
+    "game_completion_rate": {
+      "holdout": 0.2925,
+      "fixed_rule": 0.36,
+      "agent": 0.41
+    },
+    "order_7d_rate": {
+      "holdout": 0.11,
+      "fixed_rule": 0.118,
+      "agent": 0.125
+    },
+    "add_to_cart_7d_rate": {
+      "holdout": 0.22,
+      "fixed_rule": 0.224,
+      "agent": 0.228
+    },
+    "retention_7d_rate": {
+      "holdout": 0.3375,
+      "fixed_rule": 0.37,
+      "agent": 0.395
+    }
+  },
+  "row_counts": {
+    "event_log.csv": 32906,
+    "game_behavior_log.csv": 52437,
+    "intervention_test.csv": 8100,
+    "user_profile.csv": 8100,
+    "version_exposure.csv": 8100
+  },
+  "audit": {
+    "level2_start_holdout": 2028,
+    "level2_exit_holdout": 1038,
+    "level2_pass_holdout": 990,
+    "level2_start_fixed_rule": 2001,
+    "level2_pass_fixed_rule": 1125,
+    "level2_exit_fixed_rule": 876,
+    "level2_start_agent": 2054,
+    "level2_pass_agent": 1164,
+    "level2_exit_agent": 890
+  }
+}

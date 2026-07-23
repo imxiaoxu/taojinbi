@@ -1,0 +1,4742 @@
+[
+  {
+    "request_id": "raw_level_2_block_u_00297cf15f21_a064ef91",
+    "user_id": "u_00297cf15f21",
+    "session_id": "s_a064ef9150",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-10 05:04:20"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0038144c9a47_b689514c",
+    "user_id": "u_0038144c9a47",
+    "session_id": "s_b689514cf4",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-17 10:49:18"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 27,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0045635ba68a_3b73574c",
+    "user_id": "u_0045635ba68a",
+    "session_id": "s_3b73574cbd",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-09 03:10:18"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 19,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_004eb9c5fcb0_1f28c7b5",
+    "user_id": "u_004eb9c5fcb0",
+    "session_id": "s_1f28c7b5e2",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-09 15:49:20"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "数码",
+      "coupon_available_count": 1,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 23,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_00554ae1e01f_9dbf7617",
+    "user_id": "u_00554ae1e01f",
+    "session_id": "s_9dbf7617d3",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-03 21:04:18"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 10,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0073d9771e89_dd0987fc",
+    "user_id": "u_0073d9771e89",
+    "session_id": "s_dd0987fc4e",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-11 08:01:20"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "江苏",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 2,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0087ee38caa3_81ec0cca",
+    "user_id": "u_0087ee38caa3",
+    "session_id": "s_81ec0ccac6",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-08 06:37:20"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "家居",
+      "coupon_available_count": 2,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_00a37f60d4a5_ca37cf2f",
+    "user_id": "u_00a37f60d4a5",
+    "session_id": "s_ca37cf2f4c",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-17 15:10:18"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 2,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_00c9e1c86dd0_af89e25e",
+    "user_id": "u_00c9e1c86dd0",
+    "session_id": "s_af89e25ee2",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-03 15:28:20"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_011bbf380c74_21365c5c",
+    "user_id": "u_011bbf380c74",
+    "session_id": "s_21365c5c9a",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-14 00:40:20"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "数码",
+      "coupon_available_count": 3,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 17,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0121943eaa19_e352202b",
+    "user_id": "u_0121943eaa19",
+    "session_id": "s_e352202bc0",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-05 06:28:20"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0122538f8fe3_504afcd6",
+    "user_id": "u_0122538f8fe3",
+    "session_id": "s_504afcd6dc",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-16 07:01:20"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_013d5ec4d0e9_270859b1",
+    "user_id": "u_013d5ec4d0e9",
+    "session_id": "s_270859b155",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-17 04:22:20"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 1,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_014ba5631159_e728efeb",
+    "user_id": "u_014ba5631159",
+    "session_id": "s_e728efebf2",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-05 01:46:20"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 5,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_014c94be913f_de769b00",
+    "user_id": "u_014c94be913f",
+    "session_id": "s_de769b0065",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-03 03:52:18"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "家居",
+      "coupon_available_count": 9,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_0153e3a73336_ba851d70",
+    "user_id": "u_0153e3a73336",
+    "session_id": "s_ba851d7025",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-16 12:16:20"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "图书",
+      "coupon_available_count": 8,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": "2",
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_015dac8d7077_752dc637",
+    "user_id": "u_015dac8d7077",
+    "session_id": "s_752dc637bc",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-07 07:58:18"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "家居",
+      "coupon_available_count": 8,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_01b6018d4dbf_6c913f1d",
+    "user_id": "u_01b6018d4dbf",
+    "session_id": "s_6c913f1d1e",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-03 04:49:18"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "江苏",
+      "category_preference_1": "图书",
+      "coupon_available_count": 3,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_01fb91349dde_2370c8ed",
+    "user_id": "u_01fb91349dde",
+    "session_id": "s_2370c8ed97",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-09 04:46:18"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "广东",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_level_2_block_u_020327f3b98b_b1544f87",
+    "user_id": "u_020327f3b98b",
+    "session_id": "s_b1544f87f1",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-17 22:58:18"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 8,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 2,
+      "current_exit_point": null,
+      "fail_count_session": 1,
+      "level_2_fail_count_session": 1,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "level_2_block",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_00047e1427a4_48177081",
+    "user_id": "u_00047e1427a4",
+    "session_id": "s_4817708199",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-14 21:37:16"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_00461a92b982_7670295e",
+    "user_id": "u_00461a92b982",
+    "session_id": "s_7670295edd",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-09 07:19:16"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "广东",
+      "category_preference_1": "图书",
+      "coupon_available_count": 3,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_0090130a46e4_7d8db29a",
+    "user_id": "u_0090130a46e4",
+    "session_id": "s_7d8db29a1a",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-03 06:49:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "数码",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 11,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_00cd2a421dba_4c2c5350",
+    "user_id": "u_00cd2a421dba",
+    "session_id": "s_4c2c5350cf",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-13 19:31:16"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 7,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_00f33c266d23_5c604e5b",
+    "user_id": "u_00f33c266d23",
+    "session_id": "s_5c604e5be0",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-13 09:46:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_0135d4c83ff0_90ec6f56",
+    "user_id": "u_0135d4c83ff0",
+    "session_id": "s_90ec6f5611",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-06 07:01:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 9,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 11,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_01442461e090_f6a80d71",
+    "user_id": "u_01442461e090",
+    "session_id": "s_f6a80d714b",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-17 02:07:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "广东",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 2,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_01556b20a221_0756411a",
+    "user_id": "u_01556b20a221",
+    "session_id": "s_0756411a43",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-14 10:01:16"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "图书",
+      "coupon_available_count": 4,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 25,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_0190f02d670e_6ffdddcc",
+    "user_id": "u_0190f02d670e",
+    "session_id": "s_6ffdddcc4a",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-11 23:04:16"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": true,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "图书",
+      "coupon_available_count": 10,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_019b16dce4a9_d8a38c5d",
+    "user_id": "u_019b16dce4a9",
+    "session_id": "s_d8a38c5d8e",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-16 07:43:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "图书",
+      "coupon_available_count": 3,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_01a5488bfa09_53c44c83",
+    "user_id": "u_01a5488bfa09",
+    "session_id": "s_53c44c83a9",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-14 14:13:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 1,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 17,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_021f1684f2d2_2ace99ce",
+    "user_id": "u_021f1684f2d2",
+    "session_id": "s_2ace99ce2b",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-02 11:07:16"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "数码",
+      "coupon_available_count": 3,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 18,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_02244169dddf_b34cf81b",
+    "user_id": "u_02244169dddf",
+    "session_id": "s_b34cf81b8b",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-07 06:52:16"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 19,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_02455f6cfeaf_0e986350",
+    "user_id": "u_02455f6cfeaf",
+    "session_id": "s_0e98635003",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-16 08:04:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "家居",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_0263f4bec2ef_cd0f45e2",
+    "user_id": "u_0263f4bec2ef",
+    "session_id": "s_cd0f45e28e",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-13 23:58:16"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "江苏",
+      "category_preference_1": "图书",
+      "coupon_available_count": 4,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 17,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_02965ad583b0_2a9ccdbe",
+    "user_id": "u_02965ad583b0",
+    "session_id": "s_2a9ccdbed2",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-10 17:31:16"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "数码",
+      "coupon_available_count": 3,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 15,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_037ded4bdb24_68451b5f",
+    "user_id": "u_037ded4bdb24",
+    "session_id": "s_68451b5f53",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-11 04:43:16"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "数码",
+      "coupon_available_count": 6,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_03c436915482_487dcee4",
+    "user_id": "u_03c436915482",
+    "session_id": "s_487dcee4b4",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-13 02:43:16"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_042f677075a5_3c34e79a",
+    "user_id": "u_042f677075a5",
+    "session_id": "s_3c34e79af7",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-12 11:34:16"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 25,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_continuous_failure_u_04bdf05fb910_85ba0624",
+    "user_id": "u_04bdf05fb910",
+    "session_id": "s_85ba0624df",
+    "trigger_event": {
+      "event_name": "level_fail",
+      "event_time": "2026-06-12 08:34:16"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 9,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 20,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": 1,
+      "current_exit_point": null,
+      "fail_count_session": 2,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "continuous_failure",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_0057080937eb",
+    "user_id": "u_0057080937eb",
+    "session_id": "s_c7f25428eb",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/08 16:38"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 5,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3760.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_013d5ec4d0e9",
+    "user_id": "u_013d5ec4d0e9",
+    "session_id": "s_6f746905eb",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/17 04:29"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 1,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3895.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_01bcde2c07a1",
+    "user_id": "u_01bcde2c07a1",
+    "session_id": "s_8a4322603c",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/01 10:05"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "家居",
+      "coupon_available_count": 8,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3880.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_02b83430ac4b",
+    "user_id": "u_02b83430ac4b",
+    "session_id": "s_9b30c59e89",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/08 01:26"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 8,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 10,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 3605.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_037ded4bdb24",
+    "user_id": "u_037ded4bdb24",
+    "session_id": "s_db4c7f293f",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/11 04:50"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "数码",
+      "coupon_available_count": 6,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 4158.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_03a43f2eeedc",
+    "user_id": "u_03a43f2eeedc",
+    "session_id": "s_456a7ee39b",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/16 00:53"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "图书",
+      "coupon_available_count": 7,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 15,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 4167.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_040369e44d3e",
+    "user_id": "u_040369e44d3e",
+    "session_id": "s_9086a4feab",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/13 14:20"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 17,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3345.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_041a00fc9029",
+    "user_id": "u_041a00fc9029",
+    "session_id": "s_712a1c97b4",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/15 17:26"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 8,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 25,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 4237.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_053572b2bdae",
+    "user_id": "u_053572b2bdae",
+    "session_id": "s_d37f094b3d",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/03 11:08"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 6,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3369.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_05ebb846b21e",
+    "user_id": "u_05ebb846b21e",
+    "session_id": "s_083f7ff5a2",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/16 09:59"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 1,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 22,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 4425.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_06c69ebbb7b9",
+    "user_id": "u_06c69ebbb7b9",
+    "session_id": "s_47b0188514",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/15 19:56"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "家居",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 4189.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_0743a18c8fdc",
+    "user_id": "u_0743a18c8fdc",
+    "session_id": "s_8d71b942f9",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/11 08:35"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "广东",
+      "category_preference_1": "数码",
+      "coupon_available_count": 6,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 19,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 4527.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_075883f8326d",
+    "user_id": "u_075883f8326d",
+    "session_id": "s_aa3bcf3aad",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/08 12:23"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "图书",
+      "coupon_available_count": 8,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 10,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 4519.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_08597e23548c",
+    "user_id": "u_08597e23548c",
+    "session_id": "s_3478fa5bc4",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/10 04:29"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 22,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 4349.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_089c5de5409e",
+    "user_id": "u_089c5de5409e",
+    "session_id": "s_b738e86d99",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/02 14:14"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 6,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 20,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 3570.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_08c6b0297ca6",
+    "user_id": "u_08c6b0297ca6",
+    "session_id": "s_57983a17a6",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/16 03:11"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "数码",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 19,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 4460.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_098c3fe92865",
+    "user_id": "u_098c3fe92865",
+    "session_id": "s_d4708173da",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/10 21:20"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 4,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 24,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3406.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_0a074880a129",
+    "user_id": "u_0a074880a129",
+    "session_id": "s_ae9d397d1f",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026/06/04 02:29"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 6,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 3731.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_0a1b97f62bc1",
+    "user_id": "u_0a1b97f62bc1",
+    "session_id": "s_bf9ebb7bb5",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/09 10:38"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 7,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 27,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 3470.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_android_perf_risk_u_0b02d1b786c1",
+    "user_id": "u_0b02d1b786c1",
+    "session_id": "s_0c1a77c317",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/15 06:59"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": true,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "数码",
+      "coupon_available_count": 3,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 18,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 4531.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "android_perf_risk",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_00297cf15f21",
+    "user_id": "u_00297cf15f21",
+    "session_id": "s_b7b2e84a7e",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/10 05:14"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1197.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_00554ae1e01f",
+    "user_id": "u_00554ae1e01f",
+    "session_id": "s_4a5e8b34ef",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/03 21:14"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 10,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2301.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_0086a7648ffa",
+    "user_id": "u_0086a7648ffa",
+    "session_id": "s_75cd07d501",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/03 20:14"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 4,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 14,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1002.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_0087ee38caa3",
+    "user_id": "u_0087ee38caa3",
+    "session_id": "s_d9bd4992f0",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/08 06:47"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "家居",
+      "coupon_available_count": 2,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1049.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_00ddaa0702fc",
+    "user_id": "u_00ddaa0702fc",
+    "session_id": "s_73809460cf",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/04 00:14"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 25,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2113.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_00f33c266d23",
+    "user_id": "u_00f33c266d23",
+    "session_id": "s_de056f0349",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/13 09:56"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2059.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_011bbf380c74",
+    "user_id": "u_011bbf380c74",
+    "session_id": "s_95cc9f2314",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/14 00:50"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "数码",
+      "coupon_available_count": 3,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 17,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1081.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_0122538f8fe3",
+    "user_id": "u_0122538f8fe3",
+    "session_id": "s_50b5df3fdb",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/16 07:11"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2022.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_015dac8d7077",
+    "user_id": "u_015dac8d7077",
+    "session_id": "s_6b9a0a3a13",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/07 08:08"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "家居",
+      "coupon_available_count": 8,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2417.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_01a2a8137cf8",
+    "user_id": "u_01a2a8137cf8",
+    "session_id": "s_ff117d9891",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/08 14:44"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 1,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 27,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2412.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_01d500656218",
+    "user_id": "u_01d500656218",
+    "session_id": "s_669e95e2e2",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/12 02:41"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "数码",
+      "coupon_available_count": 2,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1373.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_02091df37e75",
+    "user_id": "u_02091df37e75",
+    "session_id": "s_977a872962",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/02 02:53"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 6,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 22,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2159.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_021bd2e64519",
+    "user_id": "u_021bd2e64519",
+    "session_id": "s_c2769c8462",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/02 14:17"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "数码",
+      "coupon_available_count": 5,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 835.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_022364cd378b",
+    "user_id": "u_022364cd378b",
+    "session_id": "s_7e267e908e",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/16 15:26"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "图书",
+      "coupon_available_count": 4,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2174.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_02251f3dd63f",
+    "user_id": "u_02251f3dd63f",
+    "session_id": "s_4f8351dca6",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/16 23:17"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "江苏",
+      "category_preference_1": "数码",
+      "coupon_available_count": 4,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1367.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_0244f23d5ff2",
+    "user_id": "u_0244f23d5ff2",
+    "session_id": "s_67e4cdc8bf",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/18 04:41"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "数码",
+      "coupon_available_count": 8,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 22,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 515.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_024f535d525a",
+    "user_id": "u_024f535d525a",
+    "session_id": "s_224791374a",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/14 20:32"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 739.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_02912eceb2f6",
+    "user_id": "u_02912eceb2f6",
+    "session_id": "s_97eca30169",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/03 03:11"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 5,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 2473.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_02b77aab1d14",
+    "user_id": "u_02b77aab1d14",
+    "session_id": "s_80b1c48d0c",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/03 23:20"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "家居",
+      "coupon_available_count": 1,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 814.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_cart_without_order_u_034fecc6cd69",
+    "user_id": "u_034fecc6cd69",
+    "session_id": "s_64e8d24933",
+    "trigger_event": {
+      "event_name": "add_to_cart",
+      "event_time": "2026/06/11 06:29"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "家居",
+      "coupon_available_count": 10,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": true,
+      "has_order_7d": false,
+      "page_load_time_ms": 1383.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "cart_without_order",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_003653f2ff56_60d95e3e",
+    "user_id": "u_003653f2ff56",
+    "session_id": "s_60d95e3e86",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-07 09:36:45"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 20,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_0057080937eb_df26f9cd",
+    "user_id": "u_0057080937eb",
+    "session_id": "s_df26f9cd38",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-08 16:30:00"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 5,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_0109cd0c9da1_78640941",
+    "user_id": "u_0109cd0c9da1",
+    "session_id": "s_7864094161",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-17 15:45:00"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "图书",
+      "coupon_available_count": 2,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 11,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_018b10e7c0b5_3c1b016a",
+    "user_id": "u_018b10e7c0b5",
+    "session_id": "s_3c1b016ade",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-04 12:12:45"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "数码",
+      "coupon_available_count": 1,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_01e4c8b67e28_d97e0258",
+    "user_id": "u_01e4c8b67e28",
+    "session_id": "s_d97e025818",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-11 07:48:45"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "图书",
+      "coupon_available_count": 6,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 16,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_02042be2a87e_0523dff2",
+    "user_id": "u_02042be2a87e",
+    "session_id": "s_0523dff204",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-11 20:00:00"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 18,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_021b5c3d8b51_83dacc7a",
+    "user_id": "u_021b5c3d8b51",
+    "session_id": "s_83dacc7a30",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-05 21:06:00"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 3,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 28,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_02bc234600a4_ea597e48",
+    "user_id": "u_02bc234600a4",
+    "session_id": "s_ea597e4878",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-18 02:39:00"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "家居",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 15,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_033022e84be5_b3a7d4dd",
+    "user_id": "u_033022e84be5",
+    "session_id": "s_b3a7d4dd6c",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-09 06:09:00"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "家居",
+      "coupon_available_count": 11,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_03387751ec01_b9ebe413",
+    "user_id": "u_03387751ec01",
+    "session_id": "s_b9ebe41310",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-08 11:33:45"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "广东",
+      "category_preference_1": "数码",
+      "coupon_available_count": 1,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 18,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_0374ae882674_e99a5186",
+    "user_id": "u_0374ae882674",
+    "session_id": "s_e99a518671",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-11 15:48:45"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 14,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_048f68f7fc9b_b132f1e2",
+    "user_id": "u_048f68f7fc9b",
+    "session_id": "s_b132f1e243",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-05 18:54:00"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 3,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_04d6882cf52a_0eee3c63",
+    "user_id": "u_04d6882cf52a",
+    "session_id": "s_0eee3c6321",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-08 00:51:00"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 16,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_05029457ed76_8b3ed47c",
+    "user_id": "u_05029457ed76",
+    "session_id": "s_8b3ed47ccf",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-08 20:18:00"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 11,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 10,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_0508edfe0f83_0d886a7a",
+    "user_id": "u_0508edfe0f83",
+    "session_id": "s_0d886a7ac4",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-08 08:21:45"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "上海",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 3,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 18,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_05196aabb913_c4d72077",
+    "user_id": "u_05196aabb913",
+    "session_id": "s_c4d72077c6",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-05 23:36:00"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "数码",
+      "coupon_available_count": 6,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 22,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_054ef331a213_4a607761",
+    "user_id": "u_054ef331a213",
+    "session_id": "s_4a607761b8",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-05 10:12:00"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 10,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 11,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_05a9c0902377_fe0a165b",
+    "user_id": "u_05a9c0902377",
+    "session_id": "s_fe0a165b33",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-10 11:15:00"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "数码",
+      "coupon_available_count": 12,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_05ad89e2f716_5524fe3d",
+    "user_id": "u_05ad89e2f716",
+    "session_id": "s_5524fe3dfe",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-02 19:24:45"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "数码",
+      "coupon_available_count": 9,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_new_user_first_game_u_05f533680052_6782fe78",
+    "user_id": "u_05f533680052",
+    "session_id": "s_6782fe7819",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026-06-04 17:03:00"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "图书",
+      "coupon_available_count": 5,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 13,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "current_game_variant": "standard",
+      "current_level_id": null,
+      "current_exit_point": null,
+      "fail_count_session": 0,
+      "level_2_fail_count_session": 0,
+      "is_new_game_user": true
+    },
+    "source_context": {
+      "expected_scene": "new_user_first_game",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0001730311c3",
+    "user_id": "u_0001730311c3",
+    "session_id": "s_1a2b4a935a",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/13 21:20"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "图书",
+      "coupon_available_count": 6,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 8,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1645.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00047e1427a4",
+    "user_id": "u_00047e1427a4",
+    "session_id": "s_6fb84c6f53",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/20 21:56"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 1938.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0025c6995c07",
+    "user_id": "u_0025c6995c07",
+    "session_id": "s_6f23b513ca",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/04 19:44"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 7,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 20,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 2003.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_003653f2ff56",
+    "user_id": "u_003653f2ff56",
+    "session_id": "s_c9f1faa697",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/08 09:56"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "浙江",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 20,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 1172.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0038144c9a47",
+    "user_id": "u_0038144c9a47",
+    "session_id": "s_61119993b2",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/17 10:56"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 27,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 2325.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0045635ba68a",
+    "user_id": "u_0045635ba68a",
+    "session_id": "s_cb990b3059",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/09 03:17"
+    },
+    "key_features": {
+      "membership_level": "L3",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 19,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 2202.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00461a92b982",
+    "user_id": "u_00461a92b982",
+    "session_id": "s_9e4060a893",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/09 07:26"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "广东",
+      "category_preference_1": "图书",
+      "coupon_available_count": 3,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1728.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_004eb9c5fcb0",
+    "user_id": "u_004eb9c5fcb0",
+    "session_id": "s_37bdf8c52b",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/09 15:56"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "数码",
+      "coupon_available_count": 1,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 23,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1092.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0073d9771e89",
+    "user_id": "u_0073d9771e89",
+    "session_id": "s_0b118ca486",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026/06/11 08:02"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "江苏",
+      "category_preference_1": "美妆",
+      "coupon_available_count": 2,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1059.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0073f48d388a",
+    "user_id": "u_0073f48d388a",
+    "session_id": "s_f0c8113423",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/11 09:17"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "北京",
+      "category_preference_1": "数码",
+      "coupon_available_count": 0,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 14,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 942.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0090130a46e4",
+    "user_id": "u_0090130a46e4",
+    "session_id": "s_ac517b4809",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/03 06:56"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "数码",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 11,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 2141.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00a37f60d4a5",
+    "user_id": "u_00a37f60d4a5",
+    "session_id": "s_a7a90cf0aa",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/17 15:17"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "上海",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 2,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 26,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 2079.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00ac666003e2",
+    "user_id": "u_00ac666003e2",
+    "session_id": "s_2ad67a66c4",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/16 00:14"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "江苏",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 5,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 15,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 2420.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00c241b62a53",
+    "user_id": "u_00c241b62a53",
+    "session_id": "s_0b044061e6",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/16 06:50"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 9,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 14,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1409.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00c9e1c86dd0",
+    "user_id": "u_00c9e1c86dd0",
+    "session_id": "s_24042818ab",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/03 15:35"
+    },
+    "key_features": {
+      "membership_level": "L1",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 21,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1556.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00cd2a421dba",
+    "user_id": "u_00cd2a421dba",
+    "session_id": "s_38fd8997c7",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/18 19:50"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "广东",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 7,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 1700.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_00dbd660f986",
+    "user_id": "u_00dbd660f986",
+    "session_id": "s_e3dc735681",
+    "trigger_event": {
+      "event_name": "game_start",
+      "event_time": "2026/06/09 08:29"
+    },
+    "key_features": {
+      "membership_level": "L4",
+      "is_88vip": true,
+      "device_os": "iOS",
+      "province": "其他",
+      "category_preference_1": "服饰",
+      "coupon_available_count": 4,
+      "last_intervention_type": "tutorial_popup",
+      "ab_test_group": "fixed_rule",
+      "total_exposure_days": 9,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1470.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_01014572e630",
+    "user_id": "u_01014572e630",
+    "session_id": "s_30227755ae",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/15 08:17"
+    },
+    "key_features": {
+      "membership_level": "L5",
+      "is_88vip": false,
+      "device_os": "iOS",
+      "province": "北京",
+      "category_preference_1": "图书",
+      "coupon_available_count": 0,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 18,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 1716.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0109cd0c9da1",
+    "user_id": "u_0109cd0c9da1",
+    "session_id": "s_ffc0363567",
+    "trigger_event": {
+      "event_name": "product_view",
+      "event_time": "2026/06/17 15:53"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "其他",
+      "category_preference_1": "图书",
+      "coupon_available_count": 2,
+      "last_intervention_type": "game_difficulty_reduced",
+      "ab_test_group": "agent",
+      "total_exposure_days": 11,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": false,
+      "page_load_time_ms": 525.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  },
+  {
+    "request_id": "raw_no_action_u_0121943eaa19",
+    "user_id": "u_0121943eaa19",
+    "session_id": "s_073d487a9f",
+    "trigger_event": {
+      "event_name": "order_placed",
+      "event_time": "2026/06/09 06:47"
+    },
+    "key_features": {
+      "membership_level": "L2",
+      "is_88vip": false,
+      "device_os": "Android",
+      "province": "浙江",
+      "category_preference_1": "家居",
+      "coupon_available_count": 0,
+      "last_intervention_type": "no_intervention",
+      "ab_test_group": "holdout",
+      "total_exposure_days": 12,
+      "allow_coin_compensation": true,
+      "allow_coupon": true,
+      "max_intervention_per_session": 1,
+      "has_add_to_cart_7d": false,
+      "has_order_7d": true,
+      "page_load_time_ms": 1538.0,
+      "fail_count_session": 0,
+      "is_new_game_user": false
+    },
+    "source_context": {
+      "expected_scene": "no_action",
+      "source_coverage": [
+        "event_log",
+        "game_behavior_log",
+        "intervention_test",
+        "user_profile",
+        "version_exposure"
+      ],
+      "source_table_count": 5
+    }
+  }
+]

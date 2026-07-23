@@ -1,0 +1,16 @@
+dashboard,metric_name,grain,formula,refresh,caution
+实验健康度,enrolled_users,ab_group|date,count(distinct user_id_hash),hourly,首次入组唯一计数
+实验健康度,srm_p_value,experiment_id,chi-square test against 1:1:1,daily,p<0.01暂停扩量
+实验健康度,event_completeness_rate,ab_group|date,users with terminal level event / enrolled users,daily,只对已超过10分钟观察窗的用户计算
+实验健康度,dify_p95_latency_ms,date,p95(decision_latency_ms),5min,超过1500ms告警
+实验健康度,tool_failure_rate,action_type|date,failed executions / all executions,5min,超过1%告警
+效果漏斗,level_2_pass_rate,ab_group,users level_complete level2 within24h / enrolled users,daily,ITT分母不可改为接受者
+效果漏斗,game_completion_rate,ab_group,users game_complete within24h / enrolled users,daily,ITT分母
+效果漏斗,immediate_exit_rate,ab_group,users game_exit exit_point2 within10m / enrolled users,daily,恶化超过3pp暂停
+Agent质量,plan_validation_rate,workflow_version,valid plans / all agent decisions,daily,必须接近100%
+Agent质量,fallback_rate,scene_type,fallback decisions / agent decisions,daily,升高需排查模型或工具
+Agent质量,duplicate_execution_rate,action_type,duplicate idempotency keys / execution requests,daily,必须为0
+业务结果,retention_7d,ab_group,retained users on d7 / users mature for d7,daily,只纳入成熟队列
+业务结果,add_to_cart_7d,ab_group,users with add_to_cart d0-d7 / mature users,daily,只纳入成熟队列
+业务结果,order_7d,ab_group,users with order_placed d0-d7 / mature users,daily,只纳入成熟队列
+成本,incremental_cost_per_pass,ab_group,total intervention cost / incremental level2 passes,daily,Holdout作为增量基准

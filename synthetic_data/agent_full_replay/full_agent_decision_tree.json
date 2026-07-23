@@ -1,0 +1,92 @@
+{
+  "title": "Agent V1 场景优先级决策树",
+  "root_users": 8100,
+  "priority_nodes": [
+    {
+      "id": "level_2_block",
+      "label": "standard + Level 2 + 失败/退出",
+      "reached": 8100,
+      "yes": 3932,
+      "no": 4168,
+      "action_counts": {
+        "show_tutorial": 3932,
+        "switch_guided_mode": 3932,
+        "reduce_difficulty": 3932
+      }
+    },
+    {
+      "id": "continuous_failure",
+      "label": "同一会话失败次数 >= 2",
+      "reached": 4168,
+      "yes": 864,
+      "no": 3304,
+      "action_counts": {
+        "show_tutorial": 864,
+        "grant_coin_compensation": 864
+      }
+    },
+    {
+      "id": "android_perf_risk",
+      "label": "Android 且加载耗时 >= 3000ms",
+      "reached": 3304,
+      "yes": 283,
+      "no": 3021,
+      "action_counts": {
+        "show_perf_tip": 283,
+        "reduce_animation": 283
+      }
+    },
+    {
+      "id": "cart_without_order",
+      "label": "7 日加购且未下单",
+      "reached": 3021,
+      "yes": 594,
+      "no": 2427,
+      "action_counts": {
+        "explain_coin_value": 594,
+        "coupon_reminder": 441,
+        "show_recommendation": 594
+      }
+    },
+    {
+      "id": "new_user_first_game",
+      "label": "新用户进入首局",
+      "reached": 2427,
+      "yes": 989,
+      "no": 1438,
+      "action_counts": {
+        "show_tutorial": 989
+      }
+    },
+    {
+      "id": "no_action",
+      "label": "不触发干预",
+      "reached": 1438,
+      "yes": 1438,
+      "no": 0,
+      "action_counts": {
+        "no_action": 1438
+      }
+    }
+  ],
+  "scene_counts": {
+    "level_2_block": 3932,
+    "no_action": 1438,
+    "new_user_first_game": 989,
+    "cart_without_order": 594,
+    "android_perf_risk": 283,
+    "continuous_failure": 864
+  },
+  "action_counts": {
+    "show_tutorial": 5785,
+    "switch_guided_mode": 3932,
+    "reduce_difficulty": 3932,
+    "no_action": 1438,
+    "explain_coin_value": 594,
+    "coupon_reminder": 441,
+    "show_recommendation": 594,
+    "show_perf_tip": 283,
+    "reduce_animation": 283,
+    "grant_coin_compensation": 864
+  }
+}

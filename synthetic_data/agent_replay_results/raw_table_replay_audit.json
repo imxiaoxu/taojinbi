@@ -1,0 +1,31 @@
+{
+  "source_directory": "synthetic_data/generated",
+  "source_row_counts": {
+    "event_log": 32906,
+    "game_behavior_log": 52437,
+    "intervention_test": 8100,
+    "user_profile": 8100,
+    "version_exposure": 8100
+  },
+  "source_user_counts": {
+    "event_log": 8100,
+    "game_behavior_log": 8100,
+    "intervention_test": 8100,
+    "user_profile": 8100,
+    "version_exposure": 8100
+  },
+  "all_five_user_overlap": 8100,
+  "selected_replay_cases": 120,
+  "selected_all_five_table_cases": 120,
+  "scene_counts": {
+    "level_2_block": 20,
+    "continuous_failure": 20,
+    "android_perf_risk": 20,
+    "cart_without_order": 20,
+    "new_user_first_game": 20,
+    "no_action": 20
+  },
+  "scene_match_count": 120,
+  "scene_match_rate": 1.0,
+  "privacy": "Raw user identifiers are SHA-256 hashed in all generated outputs."
+}

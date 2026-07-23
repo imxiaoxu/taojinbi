@@ -1,0 +1,180 @@
+openapi: 3.0.3
+info:
+  title: Coin Game Level 2 Experiment Extension API
+  version: 1.1.0
+  description: Backend-owned APIs for assignment, event ingestion, delivery confirmation and outcome backfill. The Render delivery implements these routes as an in-memory Mock for integration testing only.
+paths:
+  /api/v1/pipeline/test:
+    post:
+      summary: Run the complete seven-stage Mock pipeline.
+      description: Executes event ingestion, stable assignment, feature building, group-specific decisioning, Mock tools and warehouse-return audit without calling production services.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PipelineTestRequest'
+      responses:
+        '200':
+          description: Complete pipeline trace returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PipelineTestResponse'
+  /v1/experiments/assign:
+    post:
+      summary: Get or create a stable 1:1:1 experiment assignment.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ExperimentAssignmentRequest'
+      responses:
+        '200':
+          description: Stable assignment returned.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExperimentAssignmentResponse'
+  /v1/events/ingest:
+    post:
+      summary: Validate and deduplicate a frontend behavioral event.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EventIngestRequest'
+      responses:
+        '202':
+          description: Accepted for real-time handling and warehouse delivery.
+  /v1/interventions/delivery:
+    post:
+      summary: Record client-side delivery and user feedback for an action.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DeliveryRequest'
+      responses:
+        '200':
+          description: Delivery event persisted.
+  /v1/eval/outcomes/backfill:
+    post:
+      summary: Backfill T+1 and T+7 experiment outcomes from the warehouse.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OutcomeBackfillRequest'
+      responses:
+        '200':
+          description: Backfill accepted.
+components:
+  schemas:
+    PipelineTestRequest:
+      type: object
+      required: [user_id_hash, session_id, force_group, event, key_features]
+      properties:
+        user_id_hash: {type: string, description: Synthetic or irreversibly hashed test user identifier}
+        session_id: {type: string}
+        trace_id: {type: string}
+        experiment_id: {type: string, example: coin_game_level2_agent_v1}
+        force_group: {type: string, enum: [holdout, fixed_rule, agent]}
+        test_case: {type: string, example: level2_first_fail}
+        event:
+          type: object
+          required: [event_id, event_name, event_time]
+          properties:
+            event_id: {type: string}
+            event_name: {type: string}
+            event_time: {type: string, format: date-time}
+            payload: {type: object, additionalProperties: true}
+        key_features: {type: object, additionalProperties: true}
+    PipelineTestResponse:
+      type: object
+      required: [pipeline_id, trace_id, mock_only, assignment, stages, decision, tool_results, warehouse_record]
+      properties:
+        pipeline_id: {type: string}
+        trace_id: {type: string}
+        mock_only: {type: boolean, enum: [true]}
+        boundary: {type: string}
+        assignment: {$ref: '#/components/schemas/ExperimentAssignmentResponse'}
+        stages:
+          type: array
+          items:
+            type: object
+            properties:
+              id: {type: string}
+              label: {type: string}
+              status: {type: string, enum: [success, fallback, deduplicated]}
+              detail: {type: string}
+              completed_at: {type: string, format: date-time}
+        decision: {type: object, additionalProperties: true}
+        decision_trace: {type: array, items: {type: object, additionalProperties: true}}
+        tool_results: {type: array, items: {type: object, additionalProperties: true}}
+        warehouse_record: {type: object, additionalProperties: true}
+    ExperimentAssignmentRequest:
+      type: object
+      required: [user_id_hash, experiment_id, strata, assignment_seed]
+      properties:
+        user_id_hash: {type: string, description: Irreversible user identifier}
+        experiment_id: {type: string, example: coin_game_level2_agent_v1}
+        strata:
+          type: object
+          required: [is_new_user, device_os, rules_viewed_before_fail]
+          properties:
+            is_new_user: {type: boolean}
+            device_os: {type: string, enum: [Android, iOS, Unknown]}
+            rules_viewed_before_fail: {type: boolean}
+        assignment_seed: {type: string}
+    ExperimentAssignmentResponse:
+      type: object
+      required: [experiment_id, ab_group, enrolled, assignment_version]
+      properties:
+        experiment_id: {type: string}
+        ab_group: {type: string, enum: [holdout, fixed_rule, agent]}
+        enrolled: {type: boolean}
+        assignment_version: {type: string}
+    EventIngestRequest:
+      type: object
+      required: [event_id, event_name, event_time, trace_id, user_id_hash, session_id, payload]
+      properties:
+        event_id: {type: string}
+        event_name: {type: string}
+        event_time: {type: string, format: date-time}
+        trace_id: {type: string}
+        user_id_hash: {type: string}
+        session_id: {type: string}
+        experiment_id: {type: string}
+        ab_group: {type: string}
+        payload: {type: object, additionalProperties: true}
+    DeliveryRequest:
+      type: object
+      required: [decision_id, trace_id, action_type, delivery_status, event_time]
+      properties:
+        decision_id: {type: string}
+        trace_id: {type: string}
+        action_type: {type: string}
+        delivery_status: {type: string, enum: [shown, failed, accepted, rejected, closed]}
+        feedback_type: {type: string, nullable: true}
+        event_time: {type: string, format: date-time}
+    OutcomeBackfillRequest:
+      type: object
+      required: [user_id_hash, experiment_id, outcome_date, metrics]
+      properties:
+        user_id_hash: {type: string}
+        experiment_id: {type: string}
+        outcome_date: {type: string, format: date}
+        metrics:
+          type: object
+          properties:
+            level_2_pass_24h: {type: boolean}
+            game_complete_24h: {type: boolean}
+            level_2_exit_10m: {type: boolean}
+            retention_7d: {type: boolean}
+            add_to_cart_7d: {type: boolean}
+            order_7d: {type: boolean}

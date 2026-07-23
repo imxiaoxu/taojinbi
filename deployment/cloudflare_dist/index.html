@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>淘金币 Level 2 Agent 实验看板</title>
+  <style>
+    :root { --ink:#162033; --muted:#64748b; --line:#d9e2ec; --bg:#f5f8fb; --panel:#fff; --blue:#1e63a9; --cyan:#0f9ba8; --amber:#d88816; --red:#c3484b; --green:#2f8a57; }
+    * { box-sizing:border-box; } body { margin:0; color:var(--ink); background:var(--bg); font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; }
+    header { color:#fff; background:#152940; border-bottom:4px solid var(--cyan); padding:22px 34px 18px; }
+    h1,h2,h3,p { margin:0; } h1 { font-size:25px; font-weight:700; } .sub { margin-top:6px; color:#d3e1ef; } .meta { margin-top:12px; font-size:12px; color:#b9cfdf; }
+    main { max-width:1420px; margin:0 auto; padding:22px 28px 40px; } nav { display:flex; gap:18px; margin:0 0 18px; overflow-x:auto; } nav a { color:var(--blue); text-decoration:none; white-space:nowrap; font-weight:600; }
+    .notice { display:flex; gap:12px; align-items:flex-start; border-left:4px solid var(--amber); padding:12px 15px; background:#fff8e9; color:#6f4a05; margin-bottom:20px; } .notice strong { white-space:nowrap; }
+    section { margin:28px 0; } .section-head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:12px; } h2 { font-size:18px; } .source { color:var(--muted); font-size:12px; }
+    .kpis { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; } .kpi { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:16px; min-height:108px; } .kpi .label { color:var(--muted); font-size:12px; } .kpi .value { margin-top:8px; font-size:27px; font-weight:700; letter-spacing:0; } .kpi .desc { margin-top:5px; color:var(--muted); font-size:12px; }
+    .grid { display:grid; grid-template-columns:1.2fr .8fr; gap:16px; } .panel { background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:17px; overflow:auto; } h3 { font-size:15px; margin-bottom:12px; }
+    table { width:100%; border-collapse:collapse; min-width:540px; } table.fit { min-width:0; } th,td { text-align:left; padding:9px 8px; border-bottom:1px solid #e7edf3; } th { color:#42526a; font-size:12px; background:#f4f8fb; } td { font-size:13px; } .right { text-align:right; }.center { text-align:center; } .positive { color:var(--green); font-weight:650; } .negative { color:var(--red); font-weight:650; }.warning { color:var(--amber); font-weight:650; }
+    .barrow { display:grid; grid-template-columns:114px 1fr 55px; align-items:center; gap:10px; margin:10px 0; } .barlabel { color:#42526a; font-size:13px; } .track { height:12px; background:#edf2f7; border-radius:2px; overflow:hidden; } .bar { height:100%; border-radius:2px; } .blue { background:var(--blue);}.cyan { background:var(--cyan);}.amber { background:var(--amber);}.red { background:var(--red);}.green { background:var(--green);}
+    .flow { display:grid; grid-template-columns:repeat(6,minmax(116px,1fr)); gap:8px; align-items:stretch; } .flow-item { border:1px solid var(--line); border-top:3px solid var(--blue); padding:12px 10px; background:#fbfdff; min-height:94px; } .flow-item .n { font-size:22px; font-weight:700; }.flow-item .t { color:var(--muted); margin-top:4px; font-size:12px; }
+    .state { display:inline-block; padding:2px 7px; border-radius:3px; font-size:12px; font-weight:650; }.state.ready{background:#e9f7ee;color:#1d6b3f}.state.pending{background:#fff2da;color:#9b6306}.state.blocked{background:#fbe8e9;color:#9b3037}
+    .test-note { border-left:4px solid var(--cyan); padding:11px 14px; background:#eef9fa; color:#165e66; margin:0 0 14px; }
+    .tree-root { width:min(420px,100%); margin:0 auto 14px; background:#e8f0fa; border:1px solid #8eb4dc; border-top:4px solid var(--blue); padding:13px 16px; text-align:center; font-weight:700; }
+    .decision-tree { max-width:1120px; margin:0 auto; position:relative; }
+    .tree-stage { display:grid; grid-template-columns:minmax(260px, .9fr) minmax(330px, 1.1fr); gap:32px; position:relative; padding:0 0 22px; }
+    .tree-stage:not(:last-child)::after { content:""; position:absolute; left:22%; bottom:0; width:2px; height:22px; background:#94a3b8; }
+    .tree-question { border:1px solid #8faac5; border-left:5px solid var(--blue); padding:13px 14px; background:#fbfdff; min-height:110px; }
+    .tree-question .step { color:var(--blue); font-size:12px; font-weight:700; }.tree-question .q { font-weight:700; margin:5px 0; font-size:15px; }.tree-question .reach { color:var(--muted); font-size:12px; }.tree-question .no { color:#56687c; font-size:12px; margin-top:8px; }
+    .tree-leaf { border:1px solid #a5c9b1; border-left:5px solid var(--green); background:#f8fcf8; padding:13px 14px; min-height:110px; position:relative; }.tree-leaf::before { content:""; position:absolute; left:-33px; top:50%; width:32px; height:2px; background:#94a3b8; }
+    .tree-leaf .yes { color:var(--green); font-weight:700; font-size:12px; }.tree-leaf .scene { font-size:15px; font-weight:700; margin:5px 0; }.tree-leaf .count { color:var(--muted); font-size:12px; }.tree-actions { display:flex; flex-wrap:wrap; gap:6px; margin-top:9px; }.tree-action { font-size:12px; color:#34516f; background:#eaf2f8; border:1px solid #c9dce9; padding:2px 6px; border-radius:3px; }
+    .tree-no-action { border-color:#bac5d2; border-left-color:#64748b; background:#fbfcfd; }.tree-no-action .yes { color:#526274; }
+    .test-toolbar { display:flex; align-items:end; justify-content:space-between; gap:14px; flex-wrap:wrap; margin-bottom:12px; }.filter-set { display:flex; gap:10px; flex-wrap:wrap; }.filter-label { display:grid; gap:4px; color:var(--muted); font-size:12px; font-weight:600; }.filter-label select { min-width:158px; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:4px; padding:7px 9px; font:inherit; }.data-link { color:var(--blue); font-weight:650; text-decoration:none; }.data-link:hover { text-decoration:underline; }
+    .subnav { display:flex; gap:4px; width:max-content; max-width:100%; margin-top:20px; padding:4px; overflow-x:auto; border:1px solid var(--line); border-radius:6px; background:#edf3f8; }.subnav button { border:1px solid transparent; border-radius:4px; background:transparent; color:#526274; padding:9px 14px; font:650 13px/1.2 inherit; white-space:nowrap; cursor:pointer; }.subnav button:hover { color:var(--blue); background:#f8fbfd; }.subnav button.active { color:#fff; border-color:#174f87; background:var(--blue); box-shadow:0 1px 2px rgba(22,32,51,.12); }.subpane { display:none; padding-top:16px; }.subpane.active { display:block; }
+    .evaluation-summary { display:grid; grid-template-columns:1.05fr .85fr 1.1fr; gap:12px; }.summary-block { min-height:156px; padding:17px 18px; border:1px solid var(--line); border-top:3px solid var(--blue); border-radius:6px; background:var(--panel); }.summary-block:nth-child(2){border-top-color:var(--cyan)}.summary-block:nth-child(3){border-top-color:var(--amber)}.summary-eyebrow { color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; }.summary-value { margin-top:8px; font-size:22px; font-weight:750; }.summary-text { margin-top:8px; color:#526274; font-size:13px; }.group-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:12px; }.group-strip span { padding:7px 6px; border:1px solid #cbd9e6; background:#f7fafc; color:#34516f; text-align:center; font-size:12px; font-weight:650; }.detail-intro { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; margin-bottom:12px; padding:12px 14px; border-left:4px solid var(--blue); background:#f2f7fc; }.detail-intro strong { display:block; margin-bottom:3px; }.detail-intro span { color:var(--muted); font-size:12px; }
+    .sandbox-status { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px; }.status-dot { width:9px; height:9px; border-radius:50%; background:#94a3b8; flex:0 0 auto; }.status-dot.online { background:var(--green); }.status-dot.offline { background:var(--red); }.sandbox-config { display:grid; grid-template-columns:minmax(240px,1fr) auto; gap:10px; margin:14px 0; }.sandbox-config input,.sandbox-field input,.sandbox-field select { width:100%; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); padding:8px 9px; font:inherit; }.command-button { border:1px solid var(--blue); border-radius:4px; background:var(--blue); color:#fff; padding:8px 14px; font:650 13px/1.2 inherit; cursor:pointer; }.command-button.secondary { color:var(--blue); background:#fff; }.command-button:disabled { opacity:.55; cursor:wait; }.sandbox-form { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }.sandbox-field { display:grid; gap:5px; color:var(--muted); font-size:12px; font-weight:600; }.sandbox-checks { display:flex; flex-wrap:wrap; gap:14px; margin:14px 0; }.sandbox-checks label { display:flex; align-items:center; gap:6px; color:#42526a; font-size:13px; }.sandbox-actions { display:flex; gap:9px; flex-wrap:wrap; }.sandbox-result { min-height:185px; }.result-banner { border-left:4px solid var(--green); background:#f1faf4; padding:12px 14px; margin-bottom:12px; }.result-banner.fallback { border-left-color:var(--amber); background:#fff8e9; }.result-banner.error { border-left-color:var(--red); background:#fff1f2; }.result-title { font-size:16px; font-weight:700; }.result-meta { color:var(--muted); font-size:12px; margin-top:4px; }.trace-list { display:grid; gap:7px; }.trace-item { display:grid; grid-template-columns:28px minmax(0,1fr) auto; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line); background:#fbfdff; }.trace-item.selected { border-color:#8eb4dc; background:#eef5fc; }.trace-step { color:var(--blue); font-weight:700; }.trace-state { color:var(--muted); font-size:12px; }.json-output { margin-top:12px; max-height:290px; overflow:auto; padding:12px; background:#111827; color:#dbeafe; border-radius:4px; font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre-wrap; word-break:break-word; }
+    .pipeline-head { display:flex; justify-content:space-between; align-items:end; gap:14px; margin-bottom:14px; }.pipeline-control { display:flex; align-items:end; gap:9px; flex-wrap:wrap; }.pipeline-control select { min-width:150px; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); padding:8px 9px; font:inherit; }.pipeline-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }.pipeline-step { min-height:112px; border:1px solid var(--line); border-top:4px solid var(--green); background:#fbfefc; padding:11px; }.pipeline-step.fallback { border-top-color:var(--amber); background:#fffbf2; }.pipeline-step.deduplicated { border-top-color:var(--cyan); background:#f3fbfc; }.pipeline-step.error { border-top-color:var(--red); background:#fff7f7; }.pipeline-index { color:var(--muted); font-size:11px; font-weight:700; }.pipeline-label { margin-top:5px; font-size:14px; font-weight:700; }.pipeline-detail { margin-top:6px; color:#526274; font-size:12px; }.pipeline-state { margin-top:8px; color:var(--green); font-size:11px; font-weight:700; text-transform:uppercase; }.pipeline-step.fallback .pipeline-state { color:var(--amber); }.pipeline-step.error .pipeline-state { color:var(--red); }
+    .foot { color:var(--muted); font-size:12px; margin-top:20px; } @media(max-width:900px){ main{padding:18px 15px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.pipeline-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.evaluation-summary{grid-template-columns:1fr}header{padding:18px}} @media(max-width:520px){.kpis{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.pipeline-flow{grid-template-columns:1fr}.pipeline-head{align-items:flex-start;flex-direction:column}.group-strip{grid-template-columns:1fr}.detail-intro{display:block}.section-head{align-items:flex-start;flex-direction:column;gap:4px}}
+    @media(max-width:900px){.sandbox-form{grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:720px){.tree-stage{grid-template-columns:1fr;gap:12px;padding-bottom:24px}.tree-stage:not(:last-child)::after{left:24px}.tree-leaf::before{display:none}.tree-question .no{padding-left:12px;border-left:2px solid #94a3b8}.tree-root{margin-left:0;text-align:left}.sandbox-config{grid-template-columns:1fr}.sandbox-form{grid-template-columns:1fr}.trace-item{grid-template-columns:24px minmax(0,1fr)}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>淘金币跳一跳 · Level 2 Agent 实验看板</h1>
+  </header>
+  <main>
+    <nav><a href="#baseline">历史基线</a><a href="#funnel">Level 2 漏斗</a><a href="#agent-test">Agent 决策测试</a><a href="#evaluation">实验评估</a></nav>
+    <div class="notice"><strong>数据状态</strong><span>当前页面展示历史五表离线基线与实验设计值。Agent、固定规则、Holdout 的实时流量、Dify 时延与动作结果需要生产埋点回流后才会显示真实数据。</span></div>
+
+    <section id="baseline"><div class="section-head"><h2>历史基线</h2><span class="source">来源：五张原始 CSV</span></div><div class="kpis" id="kpis"></div></section>
+
+    <section id="funnel"><div class="section-head"><h2>Level 2 体验断点</h2><span class="source">范围：`standard` 游戏用户</span></div><div class="grid"><div class="panel"><h3>关卡用户漏斗</h3><div class="flow" id="flow"></div><p class="foot">失败与退出不是互斥事件；用户可能失败后再次尝试，故不按简单加总解释。</p></div><div class="panel"><h3>模式完成率与退出率</h3><div id="variants"></div></div></div></section>
+
+    <section id="agent-test">
+      <div class="section-head"><h2>本地 Agent 决策测试</h2><span class="source">来源：8,100 名合成用户的全量五表回放</span></div>
+      <div class="test-note">该区域验证 Agent V1 的场景识别、Guardrail、Mock 工具执行与日志闭环。为核验分组字段，三组均运行同一 Agent Mock；不展示或推断真实业务 uplift。</div>
+      <div class="kpis" id="agentTestKpis"></div>
+      <div class="subnav" data-tab-group="agent" role="tablist" aria-label="Agent 测试数据二级菜单">
+        <button class="active" type="button" data-pane="agentOverview" role="tab" aria-selected="true">测试概览</button>
+        <button type="button" data-pane="agentSandbox" role="tab" aria-selected="false">在线测试</button>
+        <button type="button" data-pane="agentDistribution" role="tab" aria-selected="false">全量分布与审计</button>
+        <button type="button" data-pane="agentSamples" role="tab" aria-selected="false">脱敏决策样本</button>
+      </div>
+      <div class="subpane" id="agentSandbox" data-tab-group="agent" role="tabpanel">
+        <div class="grid">
+          <div class="panel">
+            <div class="section-head"><h3>Agent Mock 测试输入</h3><div class="sandbox-status"><span class="status-dot" id="sandboxStatusDot"></span><span id="sandboxStatusText">尚未连接</span></div></div>
+            <p class="source">所有动作均为模拟执行，不调用真实淘金币、教程、优惠券或游戏配置接口。</p>
+            <div class="sandbox-config"><input id="sandboxApiUrl" aria-label="Render API 地址" placeholder="https://your-service.onrender.com"><button class="command-button secondary" id="sandboxConnect" type="button">检查连接</button></div>
+            <div class="sandbox-form">
+              <label class="sandbox-field">预设场景<select id="sandboxCase"></select></label>
+              <label class="sandbox-field">游戏模式<select id="sandboxVariant"><option value="standard">standard</option><option value="guided_mode">guided_mode</option><option value="easy_mode">easy_mode</option><option value="unknown">unknown</option></select></label>
+              <label class="sandbox-field">当前关卡<input id="sandboxLevel" type="number" min="1" max="99" value="2"></label>
+              <label class="sandbox-field">会话失败次数<input id="sandboxFailCount" type="number" min="0" max="20" value="1"></label>
+              <label class="sandbox-field">设备系统<select id="sandboxOs"><option value="Unknown">Unknown</option><option value="Android">Android</option><option value="iOS">iOS</option></select></label>
+              <label class="sandbox-field">页面加载耗时（ms）<input id="sandboxLoadTime" type="number" min="0" max="30000" value="800"></label>
+              <label class="sandbox-field">可用优惠券数<input id="sandboxCoupons" type="number" min="0" max="20" value="0"></label>
+              <label class="sandbox-field">本次会话已干预次数<input id="sandboxInterventions" type="number" min="0" max="10" value="0"></label>
+            </div>
+            <div class="sandbox-checks">
+              <label><input id="sandboxCart" type="checkbox">7 日内已加购</label>
+              <label><input id="sandboxOrder" type="checkbox">7 日内已下单</label>
+              <label><input id="sandboxNewUser" type="checkbox">新游戏用户</label>
+              <label><input id="sandboxTutorialShown" type="checkbox">已展示教程</label>
+              <label><input id="sandboxToolTimeout" type="checkbox">模拟教程工具超时</label>
+              <label><input id="sandboxAgentCrash" type="checkbox">模拟 Agent 决策异常</label>
+            </div>
+            <div class="sandbox-actions"><button class="command-button" id="sandboxRun" type="button">运行 Agent 测试</button><button class="command-button secondary" id="sandboxReset" type="button">恢复预设值</button></div>
+          </div>
+          <div class="panel sandbox-result"><h3>决策结果</h3><div id="sandboxResult"><p class="source">连接 Render API 后，选择场景并运行测试。</p></div></div>
+        </div>
+        <div class="grid" style="margin-top:16px">
+          <div class="panel"><h3>规则判断轨迹</h3><div class="trace-list" id="sandboxTrace"><p class="source">暂无运行记录。</p></div></div>
+          <div class="panel"><h3>完整 Mock 响应</h3><pre class="json-output" id="sandboxJson">{}</pre></div>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="pipeline-head">
+            <div><h3>端到端 Pipeline Mock</h3><p class="source">验证前端埋点、Backend 监听、实验分桶、特征构建、策略决策、动作执行和数据回流。</p></div>
+            <div class="pipeline-control"><label class="filter-label">测试分组<select id="pipelineGroup"><option value="agent">Agent</option><option value="fixed_rule">固定规则</option><option value="holdout">Holdout</option></select></label><button class="command-button" id="pipelineRun" type="button">运行完整链路</button></div>
+          </div>
+          <div class="pipeline-flow" id="pipelineStages"><p class="source">尚未运行完整链路。</p></div>
+          <pre class="json-output" id="pipelineJson">{}</pre>
+        </div>
+      </div>
+      <div class="subpane active" id="agentOverview" data-tab-group="agent" role="tabpanel">
+        <div class="panel"><h3 id="treeTitle">Agent 决策树</h3><div class="decision-tree" id="decisionTree"></div></div>
+        <div class="grid" style="margin-top:16px">
+          <div class="panel"><h3>场景与决策状态</h3><table class="fit"><thead><tr><th>场景</th><th class="right">命中用户</th><th class="right">占全量比例</th></tr></thead><tbody id="sceneDistribution"></tbody></table></div>
+          <div class="panel"><h3>实验分组覆盖</h3><table class="fit"><thead><tr><th>分组</th><th class="right">评估用户</th></tr></thead><tbody id="groupDistribution"></tbody></table><p class="foot" id="agentTestMeta"></p></div>
+        </div>
+      </div>
+      <div class="subpane" id="agentDistribution" data-tab-group="agent" role="tabpanel">
+        <div class="grid">
+          <div class="panel"><h3>全量回放分布</h3><table><thead><tr><th>实验分组</th><th>最终场景</th><th class="right">用户数</th><th class="right">组内占比</th></tr></thead><tbody id="groupSceneDistribution"></tbody></table></div>
+          <div class="panel"><h3>回放测试审计</h3><table class="fit"><thead><tr><th>校验项</th><th class="right">结果</th></tr></thead><tbody id="replayAudit"></tbody></table><p class="foot">全量数据保留于脱敏 CSV；看板仅展示按场景聚合和固定抽样明细。</p></div>
+        </div>
+      </div>
+      <div class="subpane" id="agentSamples" data-tab-group="agent" role="tabpanel">
+        <div class="panel"><div class="test-toolbar"><div><h3>脱敏决策样本</h3><p class="source">每个“实验分组 × 场景”最多展示 6 条；用于核查单条决策。</p></div><div class="filter-set"><label class="filter-label">实验分组<select id="replayGroupFilter"><option value="all">全部分组</option><option value="holdout">holdout</option><option value="fixed_rule">fixed_rule</option><option value="agent">agent</option></select></label><label class="filter-label">最终场景<select id="replaySceneFilter"><option value="all">全部场景</option></select></label><a class="data-link" id="fullReplayCsvLink" href="synthetic_data/agent_full_replay/full_agent_replay_results.csv" target="_blank">打开全量结果 CSV</a></div></div><table><thead><tr><th>脱敏用户</th><th>分组</th><th>最终场景</th><th>动作计划</th><th class="right">工具执行</th><th class="right">五表覆盖</th></tr></thead><tbody id="sampleDecisions"></tbody></table><p class="foot" id="sampleDecisionMeta"></p></div>
+      </div>
+    </section>
+
+    <section id="evaluation">
+      <div class="section-head"><h2>实验评估</h2><span class="source">实验设计、上线监控与离线效果预测</span></div>
+      <div class="subnav" data-tab-group="evaluation" role="tablist" aria-label="实验评估二级菜单">
+        <button class="active" type="button" data-pane="evaluationOverview" role="tab" aria-selected="true">评估概览</button>
+        <button type="button" data-pane="experimentMonitoring" role="tab" aria-selected="false">三组实验监控</button>
+        <button type="button" data-pane="forecastAnalysis" role="tab" aria-selected="false">历史挽回预测</button>
+      </div>
+      <div class="subpane active" id="evaluationOverview" data-tab-group="evaluation" role="tabpanel">
+        <div class="evaluation-summary">
+          <div class="summary-block">
+            <div class="summary-eyebrow">实验结构</div>
+            <div class="summary-value">三组随机对照</div>
+            <div class="group-strip"><span>Holdout</span><span>固定规则</span><span>Agent</span></div>
+            <div class="summary-text">同时回答“干预是否有效”与“Agent 是否优于固定规则”。</div>
+          </div>
+          <div class="summary-block">
+            <div class="summary-eyebrow">最小样本量</div>
+            <div class="summary-value">1,898 / 组</div>
+            <div class="summary-text">三组共 5,694 名完整用户，用于识别 Level 2 通过率至少 +5pp 的效果。</div>
+          </div>
+          <div class="summary-block">
+            <div class="summary-eyebrow">当前数据状态</div>
+            <div class="summary-value warning">等待线上回流</div>
+            <div class="summary-text">离线预测用于立项和容量规划；真实效果必须依据成熟队列的 ITT 实验结果判断。</div>
+          </div>
+        </div>
+      </div>
+      <div class="subpane" id="experimentMonitoring" data-tab-group="evaluation" role="tabpanel">
+        <div class="detail-intro"><div><strong>三组实验监控</strong><span>上线后按 5 分钟、小时或成熟队列更新</span></div><span>主分析口径：ITT</span></div>
+        <div class="panel"><table><thead><tr><th>监控维度</th><th>Holdout</th><th>固定规则组</th><th>Agent 组</th><th>当前状态</th><th>阈值 / 规则</th></tr></thead><tbody id="monitor"></tbody></table></div>
+        <p class="foot">以首次满足 `standard + Level 2 + level_fail` 的入组用户为分母，不以实际接受干预者为分母。未成熟的 24 小时及 7 日队列不得提前作出效果判断。</p>
+      </div>
+      <div class="subpane" id="forecastAnalysis" data-tab-group="evaluation" role="tabpanel">
+        <div class="detail-intro"><div><strong>基于历史数据的离线挽回预测</strong><span>来源：`game_behavior_log.csv` + `intervention_test.csv` PSM-DID</span></div><span>仅用于实验规划</span></div>
+        <div class="grid"><div class="panel"><h3>情景预测</h3><table class="fit"><thead><tr><th>策略情景</th><th class="right">可触达用户</th><th class="right">效应</th><th class="right">预计新增完成</th></tr></thead><tbody id="forecastRows"></tbody></table></div><div class="panel"><h3>5pp MDE 所需样本量</h3><div class="barrow"><span class="barlabel">每组完整用户</span><div class="track"><div class="bar blue" style="width:63%"></div></div><strong>1,898</strong></div><div class="barrow"><span class="barlabel">三组总入组</span><div class="track"><div class="bar cyan" style="width:95%"></div></div><strong>5,694</strong></div><p class="foot">双主比较使用 Bonferroni 校正：双侧 alpha=0.025、power=80%。预测值不可替代新实验结论。</p></div></div>
+      </div>
+    </section>
+
+    <p class="foot">离线数据刷新：重新运行 `offline_simulation/build_level2_forecast.py` 并更新本页面数据文件；线上刷新：由事件流、实验宽表和 BI 任务驱动。</p>
+  </main>
+  <script src="runtime-config.js"></script>
+  <script src="dashboard_data.js"></script>
+  <script src="agent_test_data.js"></script>
+  <script>
+    const D = window.DASHBOARD_DATA;
+    const fmt = n => n.toLocaleString('zh-CN');
+    document.getElementById('kpis').innerHTML = D.kpis.map(x => `<div class="kpi"><div class="label">${x.label}</div><div class="value ${x.tone||''}">${x.value}</div><div class="desc">${x.desc}</div></div>`).join('');
+    document.getElementById('flow').innerHTML = D.level2_flow.map((x,i) => `<div class="flow-item" style="border-top-color:${x.color}"><div class="n">${fmt(x.users)}</div><div>${x.label}</div><div class="t">${x.note}</div></div>`).join('');
+    document.getElementById('variants').innerHTML = D.variants.map(x => `<div class="barrow"><span class="barlabel">${x.name}</span><div class="track"><div class="bar ${x.color}" style="width:${x.completion}%"></div></div><strong>${x.completion.toFixed(2)}%</strong></div><div class="foot" style="margin:-4px 0 10px 124px">退出率 ${x.exit.toFixed(2)}%</div>`).join('');
+    document.getElementById('monitor').innerHTML = D.monitor.map(x => `<tr><td><strong>${x.metric}</strong><br><span class="source">${x.grain}</span></td><td class="center">—</td><td class="center">—</td><td class="center">—</td><td><span class="state pending">待线上回流</span></td><td>${x.rule}</td></tr>`).join('');
+    document.getElementById('forecastRows').innerHTML = D.forecast.map(x => `<tr><td>${x.scenario}</td><td class="right">${x.eligible}</td><td class="right positive">+${x.effect.toFixed(2)}pp</td><td class="right positive">${x.low.toFixed(1)}–${x.high.toFixed(1)} 人</td></tr>`).join('');
+    const fullReplayCsvLink = document.getElementById('fullReplayCsvLink');
+    if (window.location.protocol === 'file:') fullReplayCsvLink.href = 'synthetic_data/agent_full_replay/full_agent_replay_results.csv';
+    const A = window.AGENT_TEST_DATA;
+    if (A) {
+      const sceneLabel = {level_2_block:'Level 2 受阻',continuous_failure:'连续失败',android_perf_risk:'Android 性能风险',cart_without_order:'加购未下单',new_user_first_game:'新用户首局',no_action:'无动作'};
+      const actionLabel = {show_tutorial:'教程提示',switch_guided_mode:'切换 Guided Mode',reduce_difficulty:'降低难度',grant_coin_compensation:'金币补偿',show_perf_tip:'性能提示',reduce_animation:'降低动画',explain_coin_value:'淘金币价值说明',coupon_reminder:'优惠券提醒',show_recommendation:'相关推荐',no_action:'不触发动作'};
+      document.getElementById('agentTestKpis').innerHTML = A.kpis.map(x => `<div class="kpi"><div class="label">${x.label}</div><div class="value ${x.tone||''}">${x.value}</div><div class="desc">${x.desc}</div></div>`).join('');
+      document.getElementById('treeTitle').textContent = A.tree.title;
+      const nodes = A.tree.priority_nodes;
+      document.getElementById('decisionTree').innerHTML = `<div class="tree-root">五表合成用户输入：${fmt(A.tree.root_users)} 人</div>` + nodes.map((n, i) => {
+        const actions = Object.entries(n.action_counts).map(([key, value]) => `<span class="tree-action">${actionLabel[key] || key} ${fmt(value)}</span>`).join('');
+        const isNoAction = n.id === 'no_action' ? ' tree-no-action' : '';
+        return `<div class="tree-stage"><div class="tree-question"><div class="step">判断 ${i + 1}</div><div class="q">${n.label}</div><div class="reach">进入该判断：${fmt(n.reached)} 人</div>${n.no ? `<div class="no">否：${fmt(n.no)} 人，进入下一判断</div>` : ''}</div><div class="tree-leaf${isNoAction}"><div class="yes">是：${fmt(n.yes)} 人</div><div class="scene">${sceneLabel[n.id] || n.id}</div><div class="count">最终场景命中 ${fmt(A.tree.scene_counts[n.id] || 0)} 人</div><div class="tree-actions">${actions}</div></div></div>`;
+      }).join('');
+      document.getElementById('sceneDistribution').innerHTML = Object.entries(A.tree.scene_counts).sort((a,b)=>b[1]-a[1]).map(([key, value]) => `<tr><td>${sceneLabel[key] || key}</td><td class="right">${fmt(value)}</td><td class="right">${(value / A.summary.total_users * 100).toFixed(2)}%</td></tr>`).join('');
+      document.getElementById('groupDistribution').innerHTML = Object.entries(A.summary.group_counts).map(([key, value]) => `<tr><td>${key}</td><td class="right">${fmt(value)}</td></tr>`).join('');
+      document.getElementById('agentTestMeta').textContent = `运行时间：${A.meta.generated_at}；决策状态：success ${fmt(A.summary.decision_status_counts.success || 0)}，no_action ${fmt(A.summary.decision_status_counts.no_action || 0)}。`;
+      document.getElementById('groupSceneDistribution').innerHTML = A.group_scene_breakdown.filter(x => x.users > 0).map(x => `<tr><td>${x.group}</td><td>${sceneLabel[x.scene] || x.scene}</td><td class="right">${fmt(x.users)}</td><td class="right">${(x.users / A.summary.group_counts[x.group] * 100).toFixed(2)}%</td></tr>`).join('');
+      const audit = [
+        ['逐用户场景一致性', `${fmt(A.summary.scene_match_count)} / ${fmt(A.summary.total_users)} (${(A.summary.scene_match_rate * 100).toFixed(1)}%)`],
+        ['五表来源覆盖', `${fmt(A.summary.all_five_user_count)} / ${fmt(A.summary.total_users)} (${(A.summary.all_five_coverage_rate * 100).toFixed(1)}%)`],
+        ['工具执行成功', `${fmt(A.summary.tool_success_count)} / ${fmt(A.summary.tool_execution_count)} (${(A.summary.tool_success_rate * 100).toFixed(1)}%)`],
+        ['非法动作 / 重复动作', `${A.summary.invalid_action_count} / ${A.summary.duplicate_action_decision_count}`],
+        ['全量测试结论', A.summary.passed ? '通过' : '失败'],
+      ];
+      document.getElementById('replayAudit').innerHTML = audit.map(([name, value]) => `<tr><td>${name}</td><td class="right ${value === '通过' ? 'positive' : ''}">${value}</td></tr>`).join('');
+      const sceneFilter = document.getElementById('replaySceneFilter');
+      sceneFilter.innerHTML += Object.entries(sceneLabel).map(([key, label]) => `<option value="${key}">${label}</option>`).join('');
+      const renderSamples = () => {
+        const group = document.getElementById('replayGroupFilter').value;
+        const scene = sceneFilter.value;
+        const rows = A.sample_decisions.filter(x => (group === 'all' || x.group === group) && (scene === 'all' || x.scene === scene));
+        document.getElementById('sampleDecisions').innerHTML = rows.map(x => `<tr><td><code>${x.user_id_hash}</code></td><td>${x.group}</td><td>${sceneLabel[x.scene] || x.scene}</td><td>${x.actions.split(' | ').map(action => actionLabel[action] || action).join('、')}</td><td class="right">${x.tool_success_count} / ${x.tool_execution_count}</td><td class="right">${x.source_table_count} / 5</td></tr>`).join('') || '<tr><td colspan="6" class="center">当前筛选条件下无抽样记录</td></tr>';
+        document.getElementById('sampleDecisionMeta').textContent = `当前显示 ${fmt(rows.length)} 条脱敏抽样记录；全量逐用户结果为 ${fmt(A.summary.total_users)} 条。`;
+      };
+      document.getElementById('replayGroupFilter').addEventListener('change', renderSamples);
+      sceneFilter.addEventListener('change', renderSamples);
+      renderSamples();
+
+      const fallbackCases = [
+        {id:'level2_first_fail',label:'standard Level 2 首次失败',features:{trigger_event_name:'level_fail',game_variant:'standard',level_id:2,fail_count_session:1}},
+        {id:'continuous_failure',label:'其他关卡连续失败',features:{trigger_event_name:'level_fail',game_variant:'easy_mode',level_id:3,fail_count_session:2}},
+        {id:'android_slow',label:'Android 加载性能风险',features:{trigger_event_name:'app_open',device_os:'Android',page_load_time_ms:3600}},
+        {id:'cart_no_order',label:'7 日加购未下单',features:{trigger_event_name:'add_to_cart',has_add_to_cart_7d:true,has_order_7d:false,coupon_available_count:2}},
+        {id:'new_user',label:'新用户首局',features:{trigger_event_name:'game_start',game_variant:'guided_mode',level_id:1,is_new_game_user:true}},
+        {id:'no_action',label:'无需干预',features:{trigger_event_name:'app_open',game_variant:'easy_mode',level_id:1}},
+        {id:'guardrail_block',label:'会话频控拦截',features:{trigger_event_name:'level_fail',game_variant:'standard',level_id:2,fail_count_session:1,intervention_count_session:1,max_intervention_per_session:1}},
+        {id:'tool_timeout',label:'教程工具超时',features:{trigger_event_name:'level_fail',game_variant:'standard',level_id:2,fail_count_session:1,tutorial_service_timeout:true}},
+        {id:'agent_runtime_error',label:'Agent 决策引擎异常',features:{trigger_event_name:'level_fail',game_variant:'standard',level_id:2,fail_count_session:1,simulate_agent_crash:true}},
+      ];
+      let sandboxCases = fallbackCases;
+      let sandboxTrigger = 'level_fail';
+      const apiInput = document.getElementById('sandboxApiUrl');
+      const configuredApi = (window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL) || 'http://127.0.0.1:8787';
+      apiInput.value = localStorage.getItem('coinAgentSandboxApi') || configuredApi;
+      const apiBase = () => apiInput.value.trim().replace(/\/$/, '');
+      const SANDBOX_TIMEOUT_MS = 10000;
+      const fetchWithTimeout = async (url, options = {}) => {
+        const controller = new AbortController();
+        const timer = window.setTimeout(() => controller.abort(), SANDBOX_TIMEOUT_MS);
+        try {
+          return await fetch(url, {...options, signal:controller.signal});
+        } catch (error) {
+          if (error.name === 'AbortError') {
+            const timeoutError = new Error(`请求超过 ${SANDBOX_TIMEOUT_MS / 1000} 秒，已停止等待`);
+            timeoutError.code = 'client_timeout';
+            throw timeoutError;
+          }
+          throw error;
+        } finally {
+          window.clearTimeout(timer);
+        }
+      };
+      const setSandboxStatus = (state, message) => {
+        document.getElementById('sandboxStatusDot').className = `status-dot ${state}`;
+        document.getElementById('sandboxStatusText').textContent = message;
+      };
+      const populateSandboxCases = () => {
+        const select = document.getElementById('sandboxCase');
+        const selected = select.value || 'level2_first_fail';
+        select.innerHTML = sandboxCases.map(item => `<option value="${item.id}">${item.label}</option>`).join('');
+        select.value = sandboxCases.some(item => item.id === selected) ? selected : 'level2_first_fail';
+      };
+      const applySandboxCase = () => {
+        const selected = sandboxCases.find(item => item.id === document.getElementById('sandboxCase').value) || sandboxCases[0];
+        const f = selected.features || {};
+        sandboxTrigger = f.trigger_event_name || 'unknown';
+        document.getElementById('sandboxVariant').value = f.game_variant || 'unknown';
+        document.getElementById('sandboxLevel').value = f.level_id ?? 1;
+        document.getElementById('sandboxFailCount').value = f.fail_count_session || 0;
+        document.getElementById('sandboxOs').value = f.device_os || 'Unknown';
+        document.getElementById('sandboxLoadTime').value = f.page_load_time_ms ?? 800;
+        document.getElementById('sandboxCoupons').value = f.coupon_available_count || 0;
+        document.getElementById('sandboxInterventions').value = f.intervention_count_session || 0;
+        document.getElementById('sandboxCart').checked = Boolean(f.has_add_to_cart_7d);
+        document.getElementById('sandboxOrder').checked = Boolean(f.has_order_7d);
+        document.getElementById('sandboxNewUser').checked = Boolean(f.is_new_game_user);
+        document.getElementById('sandboxTutorialShown').checked = Boolean(f.tutorial_shown_session);
+        document.getElementById('sandboxToolTimeout').checked = Boolean(f.tutorial_service_timeout);
+        document.getElementById('sandboxAgentCrash').checked = Boolean(f.simulate_agent_crash);
+      };
+      const checkSandboxConnection = async () => {
+        const base = apiBase();
+        if (!base || base.includes('REPLACE-WITH')) {
+          setSandboxStatus('offline', '请先配置 Render API 地址');
+          return false;
+        }
+        setSandboxStatus('', '连接中…');
+        try {
+          const [healthResponse, casesResponse] = await Promise.all([
+            fetchWithTimeout(`${base}/health`, {cache:'no-store'}),
+            fetchWithTimeout(`${base}/api/v1/test-cases`, {cache:'no-store'}),
+          ]);
+          if (!healthResponse.ok || !casesResponse.ok) throw new Error(`HTTP ${healthResponse.status}/${casesResponse.status}`);
+          const health = await healthResponse.json();
+          const caseData = await casesResponse.json();
+          if (!health.mock_only) throw new Error('服务未声明 mock_only');
+          sandboxCases = caseData.test_cases || fallbackCases;
+          populateSandboxCases();
+          applySandboxCase();
+          localStorage.setItem('coinAgentSandboxApi', base);
+          setSandboxStatus('online', 'Mock API 已连接');
+          return true;
+        } catch (error) {
+          setSandboxStatus('offline', `连接失败：${error.message}`);
+          return false;
+        }
+      };
+      const renderSandboxResponse = (data) => {
+        const status = data.decision.decision_status;
+        const actions = data.decision.actions || [];
+        const attempted = data.decision.planned_actions || [];
+        const bannerClass = status === 'fallback' ? 'fallback' : '';
+        const isRuntimeFailure = data.failure_event && data.failure_event.component === 'agent_decision_engine';
+        const actionText = isRuntimeFailure ? 'Agent 异常已被后端捕获，执行静态提示兜底' : (actions.length ? actions.map(item => actionLabel[item.action_type] || item.action_type).join(' → ') : (status === 'fallback' ? `静态兜底：${data.decision.fallback_action}` : '不触发动作'));
+        const runtimeMeta = isRuntimeFailure ? ` ｜ 故障检测：成功 ｜ API 进程：${data.failure_event.service_process_alive ? '存活' : '不可用'}` : '';
+        const emptyActionText = isRuntimeFailure ? 'Agent 未生成动作，已切换静态兜底' : '该场景不触发工具';
+        document.getElementById('sandboxResult').innerHTML = `<div class="result-banner ${bannerClass}"><div class="result-title">${isRuntimeFailure ? 'Agent 决策引擎异常' : (sceneLabel[data.decision.scene_type] || data.decision.scene_type)}</div><div>${actionText}</div><div class="result-meta">状态：${status} ｜ request_id：${data.request_id} ｜ mock_only：${data.mock_only}${runtimeMeta}</div></div><table class="fit"><thead><tr><th>计划动作</th><th>Mock 工具</th><th class="right">执行状态</th></tr></thead><tbody>${attempted.map(item => { const tool = data.tool_results.find(result => result.step === item.step); return `<tr><td>${actionLabel[item.action_type] || item.action_type}</td><td>${item.tool_name}</td><td class="right ${tool && tool.status === 'success' ? 'positive' : 'warning'}">${tool ? tool.status : '未执行'}</td></tr>`; }).join('') || `<tr><td colspan="3">${emptyActionText}</td></tr>`}</tbody></table>`;
+        document.getElementById('sandboxTrace').innerHTML = data.decision_trace.filter(item => item.evaluated).map((item, index) => `<div class="trace-item ${item.selected ? 'selected' : ''}"><span class="trace-step">${index + 1}</span><span>${item.label}</span><span class="trace-state">${item.selected ? '命中' : '未命中'}</span></div>`).join('');
+        document.getElementById('sandboxJson').textContent = JSON.stringify(data, null, 2);
+      };
+      const collectSandboxFeatures = () => ({
+        trigger_event_name:sandboxTrigger,
+        game_variant:document.getElementById('sandboxVariant').value,
+        level_id:Number(document.getElementById('sandboxLevel').value),
+        fail_count_session:Number(document.getElementById('sandboxFailCount').value),
+        device_os:document.getElementById('sandboxOs').value,
+        page_load_time_ms:Number(document.getElementById('sandboxLoadTime').value),
+        coupon_available_count:Number(document.getElementById('sandboxCoupons').value),
+        intervention_count_session:Number(document.getElementById('sandboxInterventions').value),
+        max_intervention_per_session:1,
+        has_add_to_cart_7d:document.getElementById('sandboxCart').checked,
+        has_order_7d:document.getElementById('sandboxOrder').checked,
+        is_new_game_user:document.getElementById('sandboxNewUser').checked,
+        tutorial_shown_session:document.getElementById('sandboxTutorialShown').checked,
+        tutorial_service_timeout:document.getElementById('sandboxToolTimeout').checked,
+        simulate_agent_crash:document.getElementById('sandboxAgentCrash').checked,
+        allow_coin_compensation:true,
+        allow_coupon:true,
+      });
+      const runSandboxTest = async () => {
+        const button = document.getElementById('sandboxRun');
+        button.disabled = true;
+        button.textContent = '运行中…';
+        try {
+          const response = await fetchWithTimeout(`${apiBase()}/api/v1/agent/test`, {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({
+              test_case:document.getElementById('sandboxCase').value,
+              key_features:collectSandboxFeatures()
+            })
+          });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          const data = await response.json();
+          renderSandboxResponse(data);
+          setSandboxStatus('online', 'Mock API 已连接');
+        } catch (error) {
+          const timedOut = error.code === 'client_timeout';
+          setSandboxStatus('offline', timedOut ? 'Agent 服务响应超时' : `测试失败：${error.message}`);
+          if (timedOut) {
+            const timeoutPayload = {system_status:'degraded',decision_status:'fallback',fallback_action:'show_static_hint',failure_component:'client_to_agent_api',error_code:'client_timeout',timeout_ms:SANDBOX_TIMEOUT_MS};
+            document.getElementById('sandboxResult').innerHTML = `<div class="result-banner fallback"><div class="result-title">Agent 服务响应超时</div><div>系统已停止等待并切换为静态提示兜底，不会保持无响应状态。</div><div class="result-meta">状态：fallback ｜ timeout：${SANDBOX_TIMEOUT_MS / 1000}s ｜ fallback：show_static_hint</div></div><button class="command-button secondary" id="sandboxInlineRetry" type="button">重新测试</button>`;
+            document.getElementById('sandboxTrace').innerHTML = '<div class="trace-item selected"><span class="trace-step">!</span><span>客户端超时保护已触发</span><span class="trace-state">已兜底</span></div>';
+            document.getElementById('sandboxJson').textContent = JSON.stringify(timeoutPayload, null, 2);
+            document.getElementById('sandboxInlineRetry').addEventListener('click', runSandboxTest);
+          } else {
+            document.getElementById('sandboxResult').innerHTML = `<div class="result-banner error"><div class="result-title">无法完成测试</div><div>请检查 Render 服务地址、冷启动状态和 CORS 配置。</div><div class="result-meta">${error.message}</div></div>`;
+          }
+        } finally {
+          button.disabled = false;
+          button.textContent = '运行 Agent 测试';
+        }
+      };
+      const renderPipelineResponse = (data) => {
+        document.getElementById('pipelineStages').innerHTML = data.stages.map((item, index) => `<div class="pipeline-step ${item.status}"><div class="pipeline-index">STEP ${index + 1}</div><div class="pipeline-label">${item.label}</div><div class="pipeline-detail">${item.detail}</div><div class="pipeline-state">${item.status}</div></div>`).join('');
+        document.getElementById('pipelineJson').textContent = JSON.stringify(data, null, 2);
+      };
+      const runPipelineTest = async () => {
+        const button = document.getElementById('pipelineRun');
+        button.disabled = true;
+        button.textContent = '链路运行中…';
+        const token = window.crypto && window.crypto.randomUUID ? window.crypto.randomUUID() : `${Date.now()}_${Math.random().toString(16).slice(2)}`;
+        try {
+          const response = await fetchWithTimeout(`${apiBase()}/api/v1/pipeline/test`, {
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify({
+              user_id_hash:`synthetic_web_${token}`,
+              session_id:`session_${token}`,
+              trace_id:`trace_${token}`,
+              force_group:document.getElementById('pipelineGroup').value,
+              test_case:document.getElementById('sandboxCase').value,
+              event:{
+                event_id:`event_${token}`,
+                event_name:sandboxTrigger,
+                event_time:new Date().toISOString(),
+                payload:collectSandboxFeatures()
+              },
+              key_features:collectSandboxFeatures()
+            })
+          });
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          renderPipelineResponse(await response.json());
+          setSandboxStatus('online', '完整 Mock Pipeline 已跑通');
+        } catch (error) {
+          const timedOut = error.code === 'client_timeout';
+          const detail = timedOut ? `完整链路超过 ${SANDBOX_TIMEOUT_MS / 1000} 秒，已停止等待并返回静态兜底。` : `完整链路失败：${error.message}`;
+          document.getElementById('pipelineStages').innerHTML = `<div class="pipeline-step error"><div class="pipeline-index">FAILED</div><div class="pipeline-label">${timedOut ? '客户端超时保护' : 'Pipeline 异常'}</div><div class="pipeline-detail">${detail}</div><div class="pipeline-state">fallback</div></div>`;
+          document.getElementById('pipelineJson').textContent = JSON.stringify({mock_only:true,system_status:'degraded',error_code:timedOut ? 'client_timeout' : 'pipeline_request_failed',fallback_action:'show_static_hint',detail}, null, 2);
+          setSandboxStatus('offline', timedOut ? 'Pipeline 响应超时' : `Pipeline 失败：${error.message}`);
+        } finally {
+          button.disabled = false;
+          button.textContent = '运行完整链路';
+        }
+      };
+      populateSandboxCases();
+      applySandboxCase();
+      document.getElementById('sandboxCase').addEventListener('change', applySandboxCase);
+      document.getElementById('sandboxConnect').addEventListener('click', checkSandboxConnection);
+      document.getElementById('sandboxRun').addEventListener('click', runSandboxTest);
+      document.getElementById('sandboxReset').addEventListener('click', applySandboxCase);
+      document.getElementById('pipelineRun').addEventListener('click', runPipelineTest);
+      if (!apiInput.value.includes('REPLACE-WITH')) checkSandboxConnection();
+
+    }
+    document.querySelectorAll('.subnav[data-tab-group]').forEach(nav => {
+      const group = nav.dataset.tabGroup;
+      nav.querySelectorAll('button[data-pane]').forEach(button => {
+        button.addEventListener('click', () => {
+          nav.querySelectorAll('button[data-pane]').forEach(item => {
+            const selected = item === button;
+            item.classList.toggle('active', selected);
+            item.setAttribute('aria-selected', String(selected));
+          });
+          document.querySelectorAll(`.subpane[data-tab-group="${group}"]`).forEach(pane => {
+            pane.classList.toggle('active', pane.id === button.dataset.pane);
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

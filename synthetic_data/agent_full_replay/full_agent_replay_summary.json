@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-07-23T16:48:27+08:00",
+  "test_type": "full_synthetic_agent_decision_replay",
+  "test_boundary": "Mock Agent and Mock tools only; not a business uplift experiment.",
+  "source_directory": "synthetic_data/generated",
+  "total_users": 8100,
+  "all_five_user_count": 8100,
+  "all_five_coverage_rate": 1.0,
+  "source_row_counts": {
+    "event_log": 32906,
+    "game_behavior_log": 52437,
+    "intervention_test": 8100,
+    "user_profile": 8100,
+    "version_exposure": 8100
+  },
+  "group_counts": {
+    "holdout": 2700,
+    "fixed_rule": 2700,
+    "agent": 2700
+  },
+  "expected_scene_counts": {
+    "level_2_block": 3932,
+    "no_action": 1438,
+    "new_user_first_game": 989,
+    "cart_without_order": 594,
+    "android_perf_risk": 283,
+    "continuous_failure": 864
+  },
+  "actual_scene_counts": {
+    "level_2_block": 3932,
+    "no_action": 1438,
+    "new_user_first_game": 989,
+    "cart_without_order": 594,
+    "android_perf_risk": 283,
+    "continuous_failure": 864
+  },
+  "scene_match_count": 8100,
+  "scene_match_rate": 1.0,
+  "decision_status_counts": {
+    "success": 6662,
+    "no_action": 1438
+  },
+  "action_counts": {
+    "show_tutorial": 5785,
+    "switch_guided_mode": 3932,
+    "reduce_difficulty": 3932,
+    "no_action": 1438,
+    "explain_coin_value": 594,
+    "coupon_reminder": 441,
+    "show_recommendation": 594,
+    "show_perf_tip": 283,
+    "reduce_animation": 283,
+    "grant_coin_compensation": 864
+  },
+  "tool_execution_count": 16708,
+  "tool_success_count": 16708,
+  "tool_success_rate": 1.0,
+  "tool_status_counts": {
+    "success": 16708
+  },
+  "invalid_action_count": 0,
+  "duplicate_action_decision_count": 0,
+  "passed": true
+}
