@@ -113,7 +113,7 @@ Render 官方要求 Web Service 监听 `0.0.0.0` 和平台提供的 `PORT`；本
 | Framework preset | None |
 | Build command | `node deployment/build_cloudflare.mjs` |
 | Build output directory | `deployment/cloudflare_dist` |
-| Environment variable | `RENDER_API_URL=https://你的服务.onrender.com` |
+| Environment variable | `RENDER_API_URL=https://coin-game-agent-sandbox-api.onrender.com` |
 
 4. 部署完成后获得 `https://<project>.pages.dev` 链接。
 5. 回到 Render，将 `ALLOWED_ORIGINS` 从 `*` 改为该 Pages 地址。若同时使用自定义域名，使用英文逗号分隔：

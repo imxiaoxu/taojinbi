@@ -6,7 +6,7 @@ const HERE = dirname(fileURLToPath(import.meta.url));
 const PACKAGE_ROOT = resolve(HERE, "..");
 const SOURCE = join(PACKAGE_ROOT, "dashboard");
 const OUTPUT = join(HERE, "cloudflare_dist");
-const API_BASE_URL = (process.env.RENDER_API_URL || "https://REPLACE-WITH-YOUR-SERVICE.onrender.com").replace(/\/$/, "");
+const API_BASE_URL = (process.env.RENDER_API_URL || "https://coin-game-agent-sandbox-api.onrender.com").replace(/\/$/, "");
 
 rmSync(OUTPUT, { recursive: true, force: true });
 mkdirSync(OUTPUT, { recursive: true });

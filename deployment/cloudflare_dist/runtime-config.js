@@ -1,3 +1,3 @@
 window.APP_CONFIG = {
-  "API_BASE_URL": "https://REPLACE-WITH-YOUR-SERVICE.onrender.com"
+  "API_BASE_URL": "https://coin-game-agent-sandbox-api.onrender.com"
 };
