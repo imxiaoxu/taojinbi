@@ -447,6 +447,7 @@ export function runPipelineRequest(body = {}) {
     decision: decisionResponse.decision,
     decision_trace: decisionResponse.decision_trace,
     tool_results: toolResults,
+    failure_event: decisionResponse.failure_event || null,
     warehouse_record: warehouseRecord,
   };
   pushBounded(pipelineAudit, {

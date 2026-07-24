@@ -44,6 +44,16 @@ const fixedRulePipeline = runPipelineRequest({
 assert.equal(fixedRulePipeline.assignment.ab_group, "fixed_rule");
 assert.equal(fixedRulePipeline.tool_results.length, 2);
 
+const crashedAgentPipeline = runPipelineRequest({
+  user_id_hash: "synthetic_crash_test",
+  session_id: "session_crash",
+  force_group: "agent",
+  test_case: "agent_runtime_error",
+});
+assert.equal(crashedAgentPipeline.decision.decision_status, "fallback");
+assert.equal(crashedAgentPipeline.failure_event.component, "agent_decision_engine");
+assert.equal(crashedAgentPipeline.failure_event.detected, true);
+
 const holdoutPipeline = runPipelineRequest({
   user_id_hash: "synthetic_holdout_test",
   session_id: "session_holdout",
@@ -54,4 +64,4 @@ assert.equal(holdoutPipeline.assignment.ab_group, "holdout");
 assert.equal(holdoutPipeline.decision.decision_status, "no_action");
 assert.equal(holdoutPipeline.tool_results.length, 0);
 
-console.log(`Sandbox smoke tests: ${Object.keys(TEST_CASES).length + 11}/${Object.keys(TEST_CASES).length + 11} passed`);
+console.log(`Sandbox smoke tests: ${Object.keys(TEST_CASES).length + 14}/${Object.keys(TEST_CASES).length + 14} passed`);

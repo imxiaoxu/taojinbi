@@ -8,6 +8,7 @@ dashboard,metric_name,grain,formula,refresh,caution
 效果漏斗,game_completion_rate,ab_group,users game_complete within24h / enrolled users,daily,ITT分母
 效果漏斗,immediate_exit_rate,ab_group,users game_exit exit_point2 within10m / enrolled users,daily,恶化超过3pp暂停
 Agent质量,plan_validation_rate,workflow_version,valid plans / all agent decisions,daily,必须接近100%
+Agent质量,agent_crash_rate,workflow_version|5min,agent_decision_engine failures / all agent decision requests,5min,<0.1%正常；0.1%-0.5%预警；>0.5%暂停扩量；>1%自动降级
 Agent质量,fallback_rate,scene_type,fallback decisions / agent decisions,daily,升高需排查模型或工具
 Agent质量,duplicate_execution_rate,action_type,duplicate idempotency keys / execution requests,daily,必须为0
 业务结果,retention_7d,ab_group,retained users on d7 / users mature for d7,daily,只纳入成熟队列

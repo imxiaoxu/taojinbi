@@ -33,8 +33,9 @@
     .evaluation-summary { display:grid; grid-template-columns:1.05fr .85fr 1.1fr; gap:12px; }.summary-block { min-height:156px; padding:17px 18px; border:1px solid var(--line); border-top:3px solid var(--blue); border-radius:6px; background:var(--panel); }.summary-block:nth-child(2){border-top-color:var(--cyan)}.summary-block:nth-child(3){border-top-color:var(--amber)}.summary-eyebrow { color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; }.summary-value { margin-top:8px; font-size:22px; font-weight:750; }.summary-text { margin-top:8px; color:#526274; font-size:13px; }.group-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:12px; }.group-strip span { padding:7px 6px; border:1px solid #cbd9e6; background:#f7fafc; color:#34516f; text-align:center; font-size:12px; font-weight:650; }.detail-intro { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; margin-bottom:12px; padding:12px 14px; border-left:4px solid var(--blue); background:#f2f7fc; }.detail-intro strong { display:block; margin-bottom:3px; }.detail-intro span { color:var(--muted); font-size:12px; }
     .sandbox-status { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px; }.status-dot { width:9px; height:9px; border-radius:50%; background:#94a3b8; flex:0 0 auto; }.status-dot.online { background:var(--green); }.status-dot.offline { background:var(--red); }.sandbox-config { display:grid; grid-template-columns:minmax(240px,1fr) auto; gap:10px; margin:14px 0; }.sandbox-config input,.sandbox-field input,.sandbox-field select { width:100%; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); padding:8px 9px; font:inherit; }.command-button { border:1px solid var(--blue); border-radius:4px; background:var(--blue); color:#fff; padding:8px 14px; font:650 13px/1.2 inherit; cursor:pointer; }.command-button.secondary { color:var(--blue); background:#fff; }.command-button:disabled { opacity:.55; cursor:wait; }.sandbox-form { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }.sandbox-field { display:grid; gap:5px; color:var(--muted); font-size:12px; font-weight:600; }.sandbox-checks { display:flex; flex-wrap:wrap; gap:14px; margin:14px 0; }.sandbox-checks label { display:flex; align-items:center; gap:6px; color:#42526a; font-size:13px; }.sandbox-actions { display:flex; gap:9px; flex-wrap:wrap; }.sandbox-result { min-height:185px; }.result-banner { border-left:4px solid var(--green); background:#f1faf4; padding:12px 14px; margin-bottom:12px; }.result-banner.fallback { border-left-color:var(--amber); background:#fff8e9; }.result-banner.error { border-left-color:var(--red); background:#fff1f2; }.result-title { font-size:16px; font-weight:700; }.result-meta { color:var(--muted); font-size:12px; margin-top:4px; }.trace-list { display:grid; gap:7px; }.trace-item { display:grid; grid-template-columns:28px minmax(0,1fr) auto; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line); background:#fbfdff; }.trace-item.selected { border-color:#8eb4dc; background:#eef5fc; }.trace-step { color:var(--blue); font-weight:700; }.trace-state { color:var(--muted); font-size:12px; }.json-output { margin-top:12px; max-height:290px; overflow:auto; padding:12px; background:#111827; color:#dbeafe; border-radius:4px; font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre-wrap; word-break:break-word; }
     .history-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; margin:0 0 14px; }.history-stat { padding:11px 12px; border:1px solid var(--line); background:#f8fbfd; }.history-stat .label { color:var(--muted); font-size:11px; }.history-stat .value { margin-top:4px; font-size:20px; font-weight:700; }.history-empty { padding:20px 8px; color:var(--muted); text-align:center; }
+    .agent-health-grid { display:grid; grid-template-columns:1.15fr repeat(3,minmax(0,1fr)); gap:9px; }.health-card { min-height:108px; padding:14px; border:1px solid var(--line); border-top:3px solid var(--blue); background:#fbfdff; }.health-card .label { color:var(--muted); font-size:11px; font-weight:700; }.health-card .value { margin-top:7px; font-size:22px; font-weight:750; }.health-card .detail { margin-top:5px; color:var(--muted); font-size:12px; }.health-card.good { border-top-color:var(--green); }.health-card.warn { border-top-color:var(--amber); }.health-card.bad { border-top-color:var(--red); }
     .pipeline-head { display:flex; justify-content:space-between; align-items:end; gap:14px; margin-bottom:14px; }.pipeline-control { display:flex; align-items:end; gap:9px; flex-wrap:wrap; }.pipeline-control select { min-width:150px; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); padding:8px 9px; font:inherit; }.pipeline-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }.pipeline-step { min-height:112px; border:1px solid var(--line); border-top:4px solid var(--green); background:#fbfefc; padding:11px; }.pipeline-step.fallback { border-top-color:var(--amber); background:#fffbf2; }.pipeline-step.deduplicated { border-top-color:var(--cyan); background:#f3fbfc; }.pipeline-step.error { border-top-color:var(--red); background:#fff7f7; }.pipeline-index { color:var(--muted); font-size:11px; font-weight:700; }.pipeline-label { margin-top:5px; font-size:14px; font-weight:700; }.pipeline-detail { margin-top:6px; color:#526274; font-size:12px; }.pipeline-state { margin-top:8px; color:var(--green); font-size:11px; font-weight:700; text-transform:uppercase; }.pipeline-step.fallback .pipeline-state { color:var(--amber); }.pipeline-step.error .pipeline-state { color:var(--red); }
-    .foot { color:var(--muted); font-size:12px; margin-top:20px; } @media(max-width:900px){ main{padding:18px 15px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.pipeline-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.evaluation-summary{grid-template-columns:1fr}header{padding:18px}} @media(max-width:520px){.kpis{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.pipeline-flow{grid-template-columns:1fr}.pipeline-head{align-items:flex-start;flex-direction:column}.group-strip{grid-template-columns:1fr}.history-summary{grid-template-columns:1fr}.detail-intro{display:block}.section-head{align-items:flex-start;flex-direction:column;gap:4px}}
+    .foot { color:var(--muted); font-size:12px; margin-top:20px; } @media(max-width:900px){ main{padding:18px 15px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.pipeline-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.evaluation-summary{grid-template-columns:1fr}.agent-health-grid{grid-template-columns:repeat(2,minmax(0,1fr))}header{padding:18px}} @media(max-width:520px){.kpis{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.pipeline-flow{grid-template-columns:1fr}.pipeline-head{align-items:flex-start;flex-direction:column}.group-strip{grid-template-columns:1fr}.history-summary{grid-template-columns:1fr}.agent-health-grid{grid-template-columns:1fr}.detail-intro{display:block}.section-head{align-items:flex-start;flex-direction:column;gap:4px}}
     @media(max-width:900px){.sandbox-form{grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:720px){.tree-stage{grid-template-columns:1fr;gap:12px;padding-bottom:24px}.tree-stage:not(:last-child)::after{left:24px}.tree-leaf::before{display:none}.tree-question .no{padding-left:12px;border-left:2px solid #94a3b8}.tree-root{margin-left:0;text-align:left}.sandbox-config{grid-template-columns:1fr}.sandbox-form{grid-template-columns:1fr}.trace-item{grid-template-columns:24px minmax(0,1fr)}}
   </style>
 </head>
@@ -157,7 +158,17 @@
       </div>
       <div class="subpane" id="experimentMonitoring" data-tab-group="evaluation" role="tabpanel">
         <div class="detail-intro"><div><strong>三组实验监控</strong><span>上线后按 5 分钟、小时或成熟队列更新</span></div><span>主分析口径：ITT</span></div>
-        <div class="panel"><table><thead><tr><th>监控维度</th><th>Holdout</th><th>固定规则组</th><th>Agent 组</th><th>当前状态</th><th>阈值 / 规则</th></tr></thead><tbody id="monitor"></tbody></table></div>
+        <div class="panel">
+          <div class="section-head"><div><h3>Agent 运行健康度</h3><p class="source">当前展示本浏览器 Mock 测试记录；上线后替换为 5 分钟实时决策日志。</p></div><span class="state pending" id="agentHealthBadge">等待测试</span></div>
+          <div class="agent-health-grid">
+            <div class="health-card" id="agentHealthStatusCard"><div class="label">运行状态</div><div class="value" id="agentHealthStatus">暂无样本</div><div class="detail" id="agentHealthSample">Agent 决策请求 0 次</div></div>
+            <div class="health-card" id="agentCrashCard"><div class="label">Agent 崩溃率</div><div class="value" id="agentCrashRate">—</div><div class="detail">引擎异常请求 / Agent 决策请求</div></div>
+            <div class="health-card" id="agentFallbackCard"><div class="label">fallback 率</div><div class="value" id="agentFallbackRate">—</div><div class="detail">fallback 或客户端超时 / Agent 请求</div></div>
+            <div class="health-card" id="agentSuccessCard"><div class="label">决策成功率</div><div class="value" id="agentSuccessRate">—</div><div class="detail">success 或 no_action / Agent 请求</div></div>
+          </div>
+          <p class="foot">崩溃率阈值：低于 0.1% 正常；0.1%–0.5% 预警；高于 0.5% 暂停扩量；高于 1% 自动降级固定规则或静态兜底。本地故障注入会被计入测试值，不代表线上真实稳定性。</p>
+        </div>
+        <div class="panel" style="margin-top:16px"><table><thead><tr><th>监控维度</th><th>Holdout</th><th>固定规则组</th><th>Agent 组</th><th>当前状态</th><th>阈值 / 规则</th></tr></thead><tbody id="monitor"></tbody></table></div>
         <p class="foot">以首次满足 `standard + Level 2 + level_fail` 的入组用户为分母，不以实际接受干预者为分母。未成熟的 24 小时及 7 日队列不得提前作出效果判断。</p>
         <div class="panel" style="margin-top:16px"><h3>监控异常排查 Runbook</h3><table><thead><tr><th>告警</th><th>优先核验</th><th>责任团队</th><th>临时处置</th><th>恢复标准</th></tr></thead><tbody id="monitorRunbook"></tbody></table><p class="foot">排查顺序统一为：前端事件 → Backend → Dify/策略 → 业务工具 → 数据回流。P0/P1 事故必须保留 trace_id、版本号与原始错误码。</p></div>
       </div>
@@ -277,6 +288,34 @@
         return (sandboxCases.find(item => item.id === id) || {label:id}).label;
       };
       const historyStatusLabel = status => ({success:'成功',no_action:'无动作',fallback:'已兜底',error:'失败',client_timeout:'客户端超时'}[status] || status);
+      const isAgentRecord = item => item.test_type === 'agent_decision' || item.response?.assignment?.ab_group === 'agent' || String(item.test_label || '').startsWith('agent /');
+      const hasAgentCrash = item => item.response?.failure_event?.component === 'agent_decision_engine';
+      const percentText = (count, total) => total ? `${(count / total * 100).toFixed(2)}%` : '—';
+      const setHealthCardTone = (id, tone) => {
+        document.getElementById(id).className = `health-card${tone ? ` ${tone}` : ''}`;
+      };
+      const renderAgentHealth = () => {
+        const agentRecords = testHistory.filter(isAgentRecord);
+        const total = agentRecords.length;
+        const crashCount = agentRecords.filter(hasAgentCrash).length;
+        const fallbackCount = agentRecords.filter(item => ['fallback','client_timeout'].includes(item.status)).length;
+        const successCount = agentRecords.filter(item => ['success','no_action'].includes(item.status)).length;
+        const crashRate = total ? crashCount / total : null;
+        const tone = crashRate === null ? '' : crashRate > 0.005 ? 'bad' : crashRate >= 0.001 ? 'warn' : 'good';
+        const status = crashRate === null ? '暂无样本' : crashRate > 0.01 ? '已自动降级' : crashRate > 0.005 ? '暂停扩量' : crashRate >= 0.001 ? '需要预警' : '运行正常';
+        const badgeState = crashRate === null ? 'pending' : tone === 'good' ? 'ready' : tone === 'warn' ? 'pending' : 'blocked';
+        document.getElementById('agentHealthBadge').className = `state ${badgeState}`;
+        document.getElementById('agentHealthBadge').textContent = status;
+        document.getElementById('agentHealthStatus').textContent = status;
+        document.getElementById('agentHealthSample').textContent = `Agent 决策请求 ${total} 次；引擎异常 ${crashCount} 次`;
+        document.getElementById('agentCrashRate').textContent = percentText(crashCount, total);
+        document.getElementById('agentFallbackRate').textContent = percentText(fallbackCount, total);
+        document.getElementById('agentSuccessRate').textContent = percentText(successCount, total);
+        setHealthCardTone('agentHealthStatusCard', tone);
+        setHealthCardTone('agentCrashCard', tone);
+        setHealthCardTone('agentFallbackCard', total && fallbackCount / total > 0.01 ? 'warn' : total ? 'good' : '');
+        setHealthCardTone('agentSuccessCard', total && successCount / total >= 0.99 ? 'good' : total ? 'warn' : '');
+      };
       const renderTestHistory = () => {
         const successCount = testHistory.filter(item => ['success','no_action'].includes(item.status)).length;
         const fallbackCount = testHistory.filter(item => ['fallback','client_timeout'].includes(item.status)).length;
@@ -291,6 +330,7 @@
         }).join('') : '<tr><td colspan="5" class="history-empty">尚无测试记录。运行 Agent 测试或完整链路后，记录会自动保存在当前浏览器。</td></tr>';
         const storageText = historyStorageAvailable ? `已在当前浏览器持久化，最多保留 ${TEST_HISTORY_LIMIT} 条。` : '浏览器存储不可用，本页关闭后记录可能丢失。';
         document.getElementById('testHistoryMeta').textContent = `${storageText} 表格展示最近 20 条，下载报告包含全部 ${testHistory.length} 条。`;
+        renderAgentHealth();
       };
       const persistTestRecord = record => {
         const completeRecord = {
@@ -324,6 +364,8 @@
         const successCount = testHistory.filter(item => ['success','no_action'].includes(item.status)).length;
         const fallbackCount = testHistory.filter(item => ['fallback','client_timeout'].includes(item.status)).length;
         const errorCount = testHistory.filter(item => item.status === 'error').length;
+        const agentRecords = testHistory.filter(isAgentRecord);
+        const crashCount = agentRecords.filter(hasAgentCrash).length;
         const rows = testHistory.map((item, index) => {
           const safe = value => String(value ?? '').replaceAll('|', '\\|').replaceAll('\n', ' ');
           return `| ${index + 1} | ${safe(item.recorded_at)} | ${item.test_type === 'pipeline' ? '完整链路' : 'Agent 决策'} | ${safe(item.test_label)} | ${safe(historyStatusLabel(item.status))} | ${safe(item.result_label)} | ${safe(item.request_id || item.record_id)} |`;
@@ -337,6 +379,9 @@
 - 成功或无动作：${successCount}
 - 兜底或超时：${fallbackCount}
 - 失败：${errorCount}
+- Agent 决策请求：${agentRecords.length}
+- Agent 引擎异常：${crashCount}
+- Agent 崩溃率：${percentText(crashCount, agentRecords.length)}
 
 | # | 测试时间 | 类型 | 场景 / 分组 | 结果 | 输出摘要 | 请求标识 |
 |---:|---|---|---|---|---|---|
