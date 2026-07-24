@@ -45,7 +45,7 @@
   </header>
   <main>
     <nav><a href="#baseline">历史基线</a><a href="#funnel">Level 2 漏斗</a><a href="#agent-test">Agent 决策测试</a><a href="#evaluation">实验评估</a></nav>
-    <div class="notice"><strong>数据状态</strong><span>当前页面展示历史五表离线基线与实验设计值。Agent、固定规则、Holdout 的实时流量、Dify 时延与动作结果需要生产埋点回流后才会显示真实数据。</span></div>
+    <div class="notice"><strong>当前环境</strong><span>离线基线 + 合成数据 Mock 测试，尚未接入生产流量。</span></div>
 
     <section id="baseline"><div class="section-head"><h2>历史基线</h2><span class="source">来源：五张原始 CSV</span></div><div class="kpis" id="kpis"></div></section>
 
@@ -150,10 +150,14 @@
             <div class="summary-text">三组共 5,694 名完整用户，用于识别 Level 2 通过率至少 +5pp 的效果。</div>
           </div>
           <div class="summary-block">
-            <div class="summary-eyebrow">当前数据状态</div>
+            <div class="summary-eyebrow">线上实验状态</div>
             <div class="summary-value warning">等待线上回流</div>
             <div class="summary-text">离线预测用于立项和容量规划；真实效果必须依据成熟队列的 ITT 实验结果判断。</div>
           </div>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <h3>数据口径说明</h3>
+          <p>历史基线来源于五张原始数据表；Agent 决策、异常兜底和 Pipeline 结果来源于合成数据及 Mock 服务。Agent、固定规则组和 Holdout 的真实流量、Dify 时延、动作执行及业务效果，需要生产埋点与数仓回流后更新。当前数据仅用于方案验证，不代表线上 A/B 实验结论。</p>
         </div>
       </div>
       <div class="subpane" id="experimentMonitoring" data-tab-group="evaluation" role="tabpanel">
