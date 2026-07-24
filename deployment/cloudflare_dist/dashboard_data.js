@@ -33,6 +33,20 @@ window.DASHBOARD_DATA = {
     {scenario:'第二次失败后降难度',eligible:84,effect:23.05,low:18.8,high:19.9},
     {scenario:'退出用户间接换算',eligible:150,effect:23.05,low:33.5,high:35.6}
   ],
+  roi: [
+    {strategy:'首次失败后教程',eligible:210,orderEffect:8.71,incrementalOrders:18.3,grossContribution:146.4,variableCost:105.0,roi:39.4,breakEvenFixedCost:41.4},
+    {strategy:'首次失败后降难度',eligible:210,orderEffect:12.61,incrementalOrders:26.5,grossContribution:211.8,variableCost:105.0,roi:101.7,breakEvenFixedCost:106.8}
+  ],
+  monitor_runbook: [
+    {alert:'分流异常 / SRM p < 0.01',check:'入组事件量、去重、固定分桶',owner:'前端 / 实验平台 / 数据',action:'暂停扩量并对账',recovery:'连续 2 小时恢复且 p >= 0.01'},
+    {alert:'前端展示失败率 > 0.5%',check:'Backend 响应、Schema、组件和展示回执',owner:'前端 / 后端',action:'切换静态提示',recovery:'连续 2 个窗口低于 0.5%'},
+    {alert:'Dify P95 > 1.5s',check:'Proxy、Workflow 节点和模型耗时',owner:'Agent / 后端',action:'超时终止并静态兜底',recovery:'P95 <= 1.5s 且超时率 < 1%'},
+    {alert:'Dify 返回格式不合法',check:'workflow_version、原始响应、JSON Schema',owner:'Agent / 后端',action:'拒绝非法动作并兜底',recovery:'计划校验通过率 >= 99.5%'},
+    {alert:'工具失败率 > 1%',check:'action_type、error_code、幂等键和限流',owner:'后端 / 业务服务',action:'受控重试或 pending',recovery:'失败率 <= 1%，重复执行率为 0'},
+    {alert:'核心效果或护栏恶化',check:'成熟队列、数据完整性、策略和游戏版本',owner:'数据 / Agent / 游戏产品',action:'降流或暂停 Agent',recovery:'护栏恢复且根因复核通过'},
+    {alert:'指标为 0 / 突增 / 完全一致',check:'ODS-DWD-宽表-BI 四层对账',owner:'数据 / BI',action:'标记数据异常，禁止解读',recovery:'三层对账误差 < 0.5%'},
+    {alert:'T+7 指标未更新',check:'成熟队列、调度、Join 和分区',owner:'数据',action:'标记未成熟或延迟',recovery:'成熟人数与入组台账一致'}
+  ],
   readiness: [
     {item:'A/B 分组、样本量、成功与停止规则',status:'已完成',state:'ready',next:'在实验平台创建 coin_game_level2_agent_v1 并锁定分桶'},
     {item:'前端事件与 trace_id 规范',status:'设计完成',state:'ready',next:'前端实现、联调和事件完整率验收'},

@@ -1,0 +1,7 @@
+﻿strategy,intervention_effect_source,assumption_scenario,eligible_users_historical_window,order_effect_pp,expected_incremental_orders,contribution_margin_per_incremental_order_cny,variable_cost_per_eligible_user_cny,expected_gross_contribution_cny,variable_cost_cny,net_contribution_before_fixed_cost_cny,operating_roi_before_fixed_cost_pct,max_affordable_one_time_fixed_cost_cny
+首次 Level 2 失败后教程,tutorial_popup,保守,210,8.71,18.3,5.0,0.8,91.5,168.0,-76.5,-45.5,0.0
+首次 Level 2 失败后教程,tutorial_popup,基准,210,8.71,18.3,8.0,0.5,146.4,105.0,41.4,39.4,41.4
+首次 Level 2 失败后教程,tutorial_popup,积极,210,8.71,18.3,12.0,0.3,219.6,63.0,156.6,248.5,156.6
+首次 Level 2 失败后降难度,game_difficulty_reduced,保守,210,12.61,26.5,5.0,0.8,132.4,168.0,-35.6,-21.2,0.0
+首次 Level 2 失败后降难度,game_difficulty_reduced,基准,210,12.61,26.5,8.0,0.5,211.8,105.0,106.8,101.7,106.8
+首次 Level 2 失败后降难度,game_difficulty_reduced,积极,210,12.61,26.5,12.0,0.3,317.7,63.0,254.7,404.4,254.7

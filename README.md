@@ -13,8 +13,9 @@
 | `03_端到端数据流与后端执行设计.md` | 前端、Backend、Dify、业务工具和失败兜底 |
 | `04_数仓字段与监控看板定义.md` | 执行事实表、实验宽表、指标 SQL 口径和看板需求 |
 | `offline_simulation/build_level2_forecast.py` | 直接读取五张原始 CSV，生成样本量与离线预测 |
-| `offline_simulation/level2_agent_forecast.md` | 脚本生成的预测说明 |
+| `offline_simulation/level2_agent_forecast.md` | 脚本生成的挽回、订单与 ROI 情景预测说明 |
 | `offline_simulation/level2_agent_forecast.csv` | 脚本生成的预测明细 |
+| `offline_simulation/level2_agent_roi_scenarios.csv` | 保守/基准/积极三档 ROI 敏感性明细 |
 | `synthetic_data/run_full_agent_replay.py` | 对 8,100 名合成用户执行全量 Agent Mock 回放并刷新看板数据 |
 | `synthetic_data/agent_full_replay/` | 逐用户结果、规则树节点分布、审计 JSON 和本地测试报告 |
 | `runtime/` | 包内 Agent Mock 运行时和脱敏抽样回放脚本 |

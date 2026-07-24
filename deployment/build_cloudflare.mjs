@@ -35,6 +35,13 @@ if (existsSync(replaySource)) {
   cpSync(replaySource, join(replayTarget, "full_agent_replay_results.csv"));
 }
 
+const roiSource = join(PACKAGE_ROOT, "offline_simulation", "level2_agent_roi_scenarios.csv");
+if (existsSync(roiSource)) {
+  const roiTarget = join(OUTPUT, "offline_simulation");
+  mkdirSync(roiTarget, { recursive: true });
+  cpSync(roiSource, join(roiTarget, "level2_agent_roi_scenarios.csv"));
+}
+
 console.log(`Cloudflare bundle ready: ${OUTPUT}`);
 console.log(`Render API: ${API_BASE_URL}`);
 console.log(`Commit: ${COMMIT_SHA}`);
