@@ -24,6 +24,7 @@
 | `deployment/build_cloudflare.mjs` | 生成 Cloudflare Pages 静态发布目录 |
 | `deployment/在线测试与Cloudflare_Render部署指南.md` | 在线测试方法、部署步骤、边界和验收标准 |
 | `deployment/public_smoke_test.mjs` | 对最终 Render 与 Cloudflare 地址执行 18 项公网验收 |
+| `.github/workflows/public-deployment-acceptance.yml` | 主分支部署后自动重试公网验收，并归档 JSON/Markdown 报告 |
 | `08_独立复现验证.md` | 在无Week5相邻目录环境中的隔离复现记录 |
 | `09_公网部署执行清单.md` | GitHub、Render、Cloudflare 的一次性发布和最终链接验收 |
 
@@ -63,6 +64,8 @@ python3 runtime/build_raw_table_replay.py
 
 在线测试请求的客户端超时为10秒。若Render、网络或Agent服务未在时限内响应，页面会停止等待、标记服务不可用并展示`show_static_hint`静态兜底，可直接点击“重新测试”。
 
+每次 Agent 决策测试和完整 Pipeline 测试都会保存在当前浏览器的 `localStorage` 中，最多保留100条，包含成功、无动作、超时、兜底和失败记录。页面可直接下载 Markdown 测试报告或包含完整响应的 JSON 记录。该记录仅在当前浏览器内持久化，不是跨设备的生产审计库。
+
 本地运行：
 
 ```bash
@@ -73,6 +76,8 @@ npm run dev
 浏览器打开 `http://127.0.0.1:8787/demo/`。公网地址为 <https://coin-game-agent-sandbox.pages.dev>，部署与验收按 `deployment/在线测试与Cloudflare_Render部署指南.md` 执行。
 
 完整 Pipeline 测试接口为 `POST /api/v1/pipeline/test`，最近 200 条临时链路审计可通过 `GET /api/v1/pipeline/audit` 查看。四个实验扩展接口也已提供内存 Mock；生产接入仍需替换为真实实验平台、业务工具和数仓服务。
+
+推送到 `main` 后，GitHub Actions 会等待 Cloudflare Pages 和 Render 发布完成，再执行18项公网验收。工作流通过 Cloudflare `build-meta.json` 核对当前 commit SHA，避免对旧版本误判；JSON与Markdown报告作为 Actions Artifact 保存90天，也会写入该次工作流的 Job Summary。工作流还支持手动执行和每日定时巡检。
 
 ## 重要边界
 

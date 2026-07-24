@@ -7,6 +7,8 @@ const PACKAGE_ROOT = resolve(HERE, "..");
 const SOURCE = join(PACKAGE_ROOT, "dashboard");
 const OUTPUT = join(HERE, "cloudflare_dist");
 const API_BASE_URL = (process.env.RENDER_API_URL || "https://coin-game-agent-sandbox-api.onrender.com").replace(/\/$/, "");
+const COMMIT_SHA = process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || "local";
+const BUILD_TIME = new Date().toISOString();
 
 rmSync(OUTPUT, { recursive: true, force: true });
 mkdirSync(OUTPUT, { recursive: true });
@@ -19,6 +21,11 @@ const indexPath = join(OUTPUT, "index.html");
 const indexHtml = readFileSync(indexPath, "utf8").replaceAll("../synthetic_data/", "synthetic_data/");
 writeFileSync(indexPath, indexHtml, "utf8");
 writeFileSync(join(OUTPUT, "runtime-config.js"), `window.APP_CONFIG = ${JSON.stringify({ API_BASE_URL }, null, 2)};\n`, "utf8");
+writeFileSync(join(OUTPUT, "build-meta.json"), `${JSON.stringify({
+  commit_sha: COMMIT_SHA,
+  built_at: BUILD_TIME,
+  api_base_url: API_BASE_URL,
+}, null, 2)}\n`, "utf8");
 writeFileSync(join(OUTPUT, "_headers"), `/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: no-referrer\n  X-Frame-Options: DENY\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n`, "utf8");
 
 const replaySource = join(PACKAGE_ROOT, "synthetic_data", "agent_full_replay", "full_agent_replay_results.csv");
@@ -30,3 +37,4 @@ if (existsSync(replaySource)) {
 
 console.log(`Cloudflare bundle ready: ${OUTPUT}`);
 console.log(`Render API: ${API_BASE_URL}`);
+console.log(`Commit: ${COMMIT_SHA}`);

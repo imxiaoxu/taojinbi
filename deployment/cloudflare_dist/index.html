@@ -32,8 +32,9 @@
     .subnav { display:flex; gap:4px; width:max-content; max-width:100%; margin-top:20px; padding:4px; overflow-x:auto; border:1px solid var(--line); border-radius:6px; background:#edf3f8; }.subnav button { border:1px solid transparent; border-radius:4px; background:transparent; color:#526274; padding:9px 14px; font:650 13px/1.2 inherit; white-space:nowrap; cursor:pointer; }.subnav button:hover { color:var(--blue); background:#f8fbfd; }.subnav button.active { color:#fff; border-color:#174f87; background:var(--blue); box-shadow:0 1px 2px rgba(22,32,51,.12); }.subpane { display:none; padding-top:16px; }.subpane.active { display:block; }
     .evaluation-summary { display:grid; grid-template-columns:1.05fr .85fr 1.1fr; gap:12px; }.summary-block { min-height:156px; padding:17px 18px; border:1px solid var(--line); border-top:3px solid var(--blue); border-radius:6px; background:var(--panel); }.summary-block:nth-child(2){border-top-color:var(--cyan)}.summary-block:nth-child(3){border-top-color:var(--amber)}.summary-eyebrow { color:var(--muted); font-size:11px; font-weight:700; text-transform:uppercase; }.summary-value { margin-top:8px; font-size:22px; font-weight:750; }.summary-text { margin-top:8px; color:#526274; font-size:13px; }.group-strip { display:grid; grid-template-columns:repeat(3,1fr); gap:6px; margin-top:12px; }.group-strip span { padding:7px 6px; border:1px solid #cbd9e6; background:#f7fafc; color:#34516f; text-align:center; font-size:12px; font-weight:650; }.detail-intro { display:flex; justify-content:space-between; gap:16px; align-items:flex-start; margin-bottom:12px; padding:12px 14px; border-left:4px solid var(--blue); background:#f2f7fc; }.detail-intro strong { display:block; margin-bottom:3px; }.detail-intro span { color:var(--muted); font-size:12px; }
     .sandbox-status { display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px; }.status-dot { width:9px; height:9px; border-radius:50%; background:#94a3b8; flex:0 0 auto; }.status-dot.online { background:var(--green); }.status-dot.offline { background:var(--red); }.sandbox-config { display:grid; grid-template-columns:minmax(240px,1fr) auto; gap:10px; margin:14px 0; }.sandbox-config input,.sandbox-field input,.sandbox-field select { width:100%; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); padding:8px 9px; font:inherit; }.command-button { border:1px solid var(--blue); border-radius:4px; background:var(--blue); color:#fff; padding:8px 14px; font:650 13px/1.2 inherit; cursor:pointer; }.command-button.secondary { color:var(--blue); background:#fff; }.command-button:disabled { opacity:.55; cursor:wait; }.sandbox-form { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; }.sandbox-field { display:grid; gap:5px; color:var(--muted); font-size:12px; font-weight:600; }.sandbox-checks { display:flex; flex-wrap:wrap; gap:14px; margin:14px 0; }.sandbox-checks label { display:flex; align-items:center; gap:6px; color:#42526a; font-size:13px; }.sandbox-actions { display:flex; gap:9px; flex-wrap:wrap; }.sandbox-result { min-height:185px; }.result-banner { border-left:4px solid var(--green); background:#f1faf4; padding:12px 14px; margin-bottom:12px; }.result-banner.fallback { border-left-color:var(--amber); background:#fff8e9; }.result-banner.error { border-left-color:var(--red); background:#fff1f2; }.result-title { font-size:16px; font-weight:700; }.result-meta { color:var(--muted); font-size:12px; margin-top:4px; }.trace-list { display:grid; gap:7px; }.trace-item { display:grid; grid-template-columns:28px minmax(0,1fr) auto; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line); background:#fbfdff; }.trace-item.selected { border-color:#8eb4dc; background:#eef5fc; }.trace-step { color:var(--blue); font-weight:700; }.trace-state { color:var(--muted); font-size:12px; }.json-output { margin-top:12px; max-height:290px; overflow:auto; padding:12px; background:#111827; color:#dbeafe; border-radius:4px; font:12px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; white-space:pre-wrap; word-break:break-word; }
+    .history-summary { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; margin:0 0 14px; }.history-stat { padding:11px 12px; border:1px solid var(--line); background:#f8fbfd; }.history-stat .label { color:var(--muted); font-size:11px; }.history-stat .value { margin-top:4px; font-size:20px; font-weight:700; }.history-empty { padding:20px 8px; color:var(--muted); text-align:center; }
     .pipeline-head { display:flex; justify-content:space-between; align-items:end; gap:14px; margin-bottom:14px; }.pipeline-control { display:flex; align-items:end; gap:9px; flex-wrap:wrap; }.pipeline-control select { min-width:150px; border:1px solid var(--line); border-radius:4px; background:#fff; color:var(--ink); padding:8px 9px; font:inherit; }.pipeline-flow { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; }.pipeline-step { min-height:112px; border:1px solid var(--line); border-top:4px solid var(--green); background:#fbfefc; padding:11px; }.pipeline-step.fallback { border-top-color:var(--amber); background:#fffbf2; }.pipeline-step.deduplicated { border-top-color:var(--cyan); background:#f3fbfc; }.pipeline-step.error { border-top-color:var(--red); background:#fff7f7; }.pipeline-index { color:var(--muted); font-size:11px; font-weight:700; }.pipeline-label { margin-top:5px; font-size:14px; font-weight:700; }.pipeline-detail { margin-top:6px; color:#526274; font-size:12px; }.pipeline-state { margin-top:8px; color:var(--green); font-size:11px; font-weight:700; text-transform:uppercase; }.pipeline-step.fallback .pipeline-state { color:var(--amber); }.pipeline-step.error .pipeline-state { color:var(--red); }
-    .foot { color:var(--muted); font-size:12px; margin-top:20px; } @media(max-width:900px){ main{padding:18px 15px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.pipeline-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.evaluation-summary{grid-template-columns:1fr}header{padding:18px}} @media(max-width:520px){.kpis{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.pipeline-flow{grid-template-columns:1fr}.pipeline-head{align-items:flex-start;flex-direction:column}.group-strip{grid-template-columns:1fr}.detail-intro{display:block}.section-head{align-items:flex-start;flex-direction:column;gap:4px}}
+    .foot { color:var(--muted); font-size:12px; margin-top:20px; } @media(max-width:900px){ main{padding:18px 15px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid{grid-template-columns:1fr}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}.pipeline-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.evaluation-summary{grid-template-columns:1fr}header{padding:18px}} @media(max-width:520px){.kpis{grid-template-columns:1fr}.flow{grid-template-columns:1fr}.pipeline-flow{grid-template-columns:1fr}.pipeline-head{align-items:flex-start;flex-direction:column}.group-strip{grid-template-columns:1fr}.history-summary{grid-template-columns:1fr}.detail-intro{display:block}.section-head{align-items:flex-start;flex-direction:column;gap:4px}}
     @media(max-width:900px){.sandbox-form{grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:720px){.tree-stage{grid-template-columns:1fr;gap:12px;padding-bottom:24px}.tree-stage:not(:last-child)::after{left:24px}.tree-leaf::before{display:none}.tree-question .no{padding-left:12px;border-left:2px solid #94a3b8}.tree-root{margin-left:0;text-align:left}.sandbox-config{grid-template-columns:1fr}.sandbox-form{grid-template-columns:1fr}.trace-item{grid-template-columns:24px minmax(0,1fr)}}
   </style>
 </head>
@@ -98,6 +99,15 @@
           </div>
           <div class="pipeline-flow" id="pipelineStages"><p class="source">尚未运行完整链路。</p></div>
           <pre class="json-output" id="pipelineJson">{}</pre>
+        </div>
+        <div class="panel" style="margin-top:16px">
+          <div class="pipeline-head">
+            <div><h3>测试记录与报告</h3><p class="source">记录保存在当前浏览器，不含真实用户数据；关闭页面后仍可保留，清除浏览器数据或点击清空后删除。</p></div>
+            <div class="sandbox-actions"><button class="command-button secondary" id="downloadTestReport" type="button">下载 Markdown 报告</button><button class="command-button secondary" id="downloadTestJson" type="button">下载 JSON 数据</button><button class="command-button secondary" id="clearTestHistory" type="button">清空记录</button></div>
+          </div>
+          <div class="history-summary" id="testHistorySummary"></div>
+          <table><thead><tr><th>测试时间</th><th>类型</th><th>场景 / 分组</th><th>结果</th><th>请求标识</th></tr></thead><tbody id="testHistoryRows"></tbody></table>
+          <p class="foot" id="testHistoryMeta"></p>
         </div>
       </div>
       <div class="subpane active" id="agentOverview" data-tab-group="agent" role="tabpanel">
@@ -242,6 +252,93 @@
           window.clearTimeout(timer);
         }
       };
+      const TEST_HISTORY_KEY = 'coinAgentSandboxTestHistoryV1';
+      const TEST_HISTORY_LIMIT = 100;
+      let historyStorageAvailable = true;
+      const readTestHistory = () => {
+        try {
+          const parsed = JSON.parse(localStorage.getItem(TEST_HISTORY_KEY) || '[]');
+          return Array.isArray(parsed) ? parsed.slice(0, TEST_HISTORY_LIMIT) : [];
+        } catch (error) {
+          historyStorageAvailable = false;
+          return [];
+        }
+      };
+      let testHistory = readTestHistory();
+      const htmlEscape = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+      const selectedCaseLabel = () => {
+        const id = document.getElementById('sandboxCase').value;
+        return (sandboxCases.find(item => item.id === id) || {label:id}).label;
+      };
+      const historyStatusLabel = status => ({success:'成功',no_action:'无动作',fallback:'已兜底',error:'失败',client_timeout:'客户端超时'}[status] || status);
+      const renderTestHistory = () => {
+        const successCount = testHistory.filter(item => ['success','no_action'].includes(item.status)).length;
+        const fallbackCount = testHistory.filter(item => ['fallback','client_timeout'].includes(item.status)).length;
+        document.getElementById('testHistorySummary').innerHTML = [
+          {label:'本地记录',value:testHistory.length},
+          {label:'成功 / 无动作',value:successCount},
+          {label:'兜底 / 超时',value:fallbackCount},
+        ].map(item => `<div class="history-stat"><div class="label">${item.label}</div><div class="value">${item.value}</div></div>`).join('');
+        document.getElementById('testHistoryRows').innerHTML = testHistory.length ? testHistory.slice(0, 20).map(item => {
+          const tone = ['success','no_action'].includes(item.status) ? 'positive' : (['fallback','client_timeout'].includes(item.status) ? 'warning' : 'negative');
+          return `<tr><td>${htmlEscape(new Date(item.recorded_at).toLocaleString('zh-CN', {hour12:false}))}</td><td>${item.test_type === 'pipeline' ? '完整链路' : 'Agent 决策'}</td><td>${htmlEscape(item.test_label)}</td><td class="${tone}">${htmlEscape(historyStatusLabel(item.status))}<br><span class="source">${htmlEscape(item.result_label)}</span></td><td><code>${htmlEscape(item.request_id || item.record_id)}</code></td></tr>`;
+        }).join('') : '<tr><td colspan="5" class="history-empty">尚无测试记录。运行 Agent 测试或完整链路后，记录会自动保存在当前浏览器。</td></tr>';
+        const storageText = historyStorageAvailable ? `已在当前浏览器持久化，最多保留 ${TEST_HISTORY_LIMIT} 条。` : '浏览器存储不可用，本页关闭后记录可能丢失。';
+        document.getElementById('testHistoryMeta').textContent = `${storageText} 表格展示最近 20 条，下载报告包含全部 ${testHistory.length} 条。`;
+      };
+      const persistTestRecord = record => {
+        const completeRecord = {
+          record_id:record.record_id || `local_${Date.now()}_${Math.random().toString(16).slice(2)}`,
+          recorded_at:new Date().toISOString(),
+          api_base_url:apiBase(),
+          mock_only:true,
+          ...record,
+        };
+        testHistory = [completeRecord, ...testHistory].slice(0, TEST_HISTORY_LIMIT);
+        try {
+          localStorage.setItem(TEST_HISTORY_KEY, JSON.stringify(testHistory));
+          historyStorageAvailable = true;
+        } catch (error) {
+          historyStorageAvailable = false;
+        }
+        renderTestHistory();
+      };
+      const reportTimestamp = () => new Date().toISOString().replace(/[-:]/g, '').replace(/\..+/, '').replace('T', '_');
+      const downloadFile = (filename, content, type) => {
+        const url = URL.createObjectURL(new Blob([content], {type}));
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        window.setTimeout(() => URL.revokeObjectURL(url), 0);
+      };
+      const buildMarkdownReport = () => {
+        const successCount = testHistory.filter(item => ['success','no_action'].includes(item.status)).length;
+        const fallbackCount = testHistory.filter(item => ['fallback','client_timeout'].includes(item.status)).length;
+        const errorCount = testHistory.filter(item => item.status === 'error').length;
+        const rows = testHistory.map((item, index) => {
+          const safe = value => String(value ?? '').replaceAll('|', '\\|').replaceAll('\n', ' ');
+          return `| ${index + 1} | ${safe(item.recorded_at)} | ${item.test_type === 'pipeline' ? '完整链路' : 'Agent 决策'} | ${safe(item.test_label)} | ${safe(historyStatusLabel(item.status))} | ${safe(item.result_label)} | ${safe(item.request_id || item.record_id)} |`;
+        }).join('\n') || '| - | - | - | - | - | 尚无测试记录 | - |';
+        return `# 淘金币游戏 Agent 在线测试报告
+
+- 生成时间：${new Date().toISOString()}
+- 测试环境：${apiBase()}
+- 数据边界：合成数据与 Mock 工具，不调用真实淘金币业务接口
+- 记录范围：当前浏览器，共 ${testHistory.length} 条
+- 成功或无动作：${successCount}
+- 兜底或超时：${fallbackCount}
+- 失败：${errorCount}
+
+| # | 测试时间 | 类型 | 场景 / 分组 | 结果 | 输出摘要 | 请求标识 |
+|---:|---|---|---|---|---|---|
+${rows}
+
+> 本报告用于验证 Agent 决策、Guardrail、异常兜底与 Mock 数据链路，不代表线上 A/B 因果效果。
+`;
+      };
       const setSandboxStatus = (state, message) => {
         document.getElementById('sandboxStatusDot').className = `status-dot ${state}`;
         document.getElementById('sandboxStatusText').textContent = message;
@@ -345,19 +442,36 @@
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const data = await response.json();
           renderSandboxResponse(data);
+          persistTestRecord({
+            record_id:data.request_id,
+            test_type:'agent_decision',
+            test_label:selectedCaseLabel(),
+            status:data.decision.decision_status,
+            result_label:sceneLabel[data.decision.scene_type] || data.decision.scene_type,
+            request_id:data.request_id,
+            response:data,
+          });
           setSandboxStatus('online', 'Mock API 已连接');
         } catch (error) {
           const timedOut = error.code === 'client_timeout';
+          const failurePayload = {mock_only:true,system_status:'degraded',decision_status:timedOut ? 'fallback' : 'error',fallback_action:'show_static_hint',failure_component:'client_to_agent_api',error_code:timedOut ? 'client_timeout' : 'agent_request_failed',timeout_ms:timedOut ? SANDBOX_TIMEOUT_MS : null,error_message:error.message};
           setSandboxStatus('offline', timedOut ? 'Agent 服务响应超时' : `测试失败：${error.message}`);
           if (timedOut) {
-            const timeoutPayload = {system_status:'degraded',decision_status:'fallback',fallback_action:'show_static_hint',failure_component:'client_to_agent_api',error_code:'client_timeout',timeout_ms:SANDBOX_TIMEOUT_MS};
             document.getElementById('sandboxResult').innerHTML = `<div class="result-banner fallback"><div class="result-title">Agent 服务响应超时</div><div>系统已停止等待并切换为静态提示兜底，不会保持无响应状态。</div><div class="result-meta">状态：fallback ｜ timeout：${SANDBOX_TIMEOUT_MS / 1000}s ｜ fallback：show_static_hint</div></div><button class="command-button secondary" id="sandboxInlineRetry" type="button">重新测试</button>`;
             document.getElementById('sandboxTrace').innerHTML = '<div class="trace-item selected"><span class="trace-step">!</span><span>客户端超时保护已触发</span><span class="trace-state">已兜底</span></div>';
-            document.getElementById('sandboxJson').textContent = JSON.stringify(timeoutPayload, null, 2);
+            document.getElementById('sandboxJson').textContent = JSON.stringify(failurePayload, null, 2);
             document.getElementById('sandboxInlineRetry').addEventListener('click', runSandboxTest);
           } else {
             document.getElementById('sandboxResult').innerHTML = `<div class="result-banner error"><div class="result-title">无法完成测试</div><div>请检查 Render 服务地址、冷启动状态和 CORS 配置。</div><div class="result-meta">${error.message}</div></div>`;
+            document.getElementById('sandboxJson').textContent = JSON.stringify(failurePayload, null, 2);
           }
+          persistTestRecord({
+            test_type:'agent_decision',
+            test_label:selectedCaseLabel(),
+            status:timedOut ? 'client_timeout' : 'error',
+            result_label:timedOut ? 'show_static_hint 静态兜底' : error.message,
+            response:failurePayload,
+          });
         } finally {
           button.disabled = false;
           button.textContent = '运行 Agent 测试';
@@ -392,13 +506,31 @@
             })
           });
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          renderPipelineResponse(await response.json());
+          const data = await response.json();
+          renderPipelineResponse(data);
+          persistTestRecord({
+            record_id:data.pipeline_id,
+            test_type:'pipeline',
+            test_label:`${data.assignment.ab_group} / ${selectedCaseLabel()}`,
+            status:data.decision.decision_status,
+            result_label:`${data.stages.length}/7 stages · ${sceneLabel[data.decision.scene_type] || data.decision.scene_type}`,
+            request_id:data.pipeline_id,
+            response:data,
+          });
           setSandboxStatus('online', '完整 Mock Pipeline 已跑通');
         } catch (error) {
           const timedOut = error.code === 'client_timeout';
           const detail = timedOut ? `完整链路超过 ${SANDBOX_TIMEOUT_MS / 1000} 秒，已停止等待并返回静态兜底。` : `完整链路失败：${error.message}`;
+          const failurePayload = {mock_only:true,system_status:'degraded',error_code:timedOut ? 'client_timeout' : 'pipeline_request_failed',fallback_action:'show_static_hint',detail};
           document.getElementById('pipelineStages').innerHTML = `<div class="pipeline-step error"><div class="pipeline-index">FAILED</div><div class="pipeline-label">${timedOut ? '客户端超时保护' : 'Pipeline 异常'}</div><div class="pipeline-detail">${detail}</div><div class="pipeline-state">fallback</div></div>`;
-          document.getElementById('pipelineJson').textContent = JSON.stringify({mock_only:true,system_status:'degraded',error_code:timedOut ? 'client_timeout' : 'pipeline_request_failed',fallback_action:'show_static_hint',detail}, null, 2);
+          document.getElementById('pipelineJson').textContent = JSON.stringify(failurePayload, null, 2);
+          persistTestRecord({
+            test_type:'pipeline',
+            test_label:`${document.getElementById('pipelineGroup').value} / ${selectedCaseLabel()}`,
+            status:timedOut ? 'client_timeout' : 'error',
+            result_label:detail,
+            response:failurePayload,
+          });
           setSandboxStatus('offline', timedOut ? 'Pipeline 响应超时' : `Pipeline 失败：${error.message}`);
         } finally {
           button.disabled = false;
@@ -412,6 +544,20 @@
       document.getElementById('sandboxRun').addEventListener('click', runSandboxTest);
       document.getElementById('sandboxReset').addEventListener('click', applySandboxCase);
       document.getElementById('pipelineRun').addEventListener('click', runPipelineTest);
+      document.getElementById('downloadTestReport').addEventListener('click', () => downloadFile(`淘金币Agent测试报告_${reportTimestamp()}.md`, buildMarkdownReport(), 'text/markdown;charset=utf-8'));
+      document.getElementById('downloadTestJson').addEventListener('click', () => downloadFile(`淘金币Agent测试记录_${reportTimestamp()}.json`, `${JSON.stringify({generated_at:new Date().toISOString(),api_base_url:apiBase(),record_count:testHistory.length,mock_only:true,records:testHistory}, null, 2)}\n`, 'application/json;charset=utf-8'));
+      document.getElementById('clearTestHistory').addEventListener('click', () => {
+        if (!window.confirm('确认清空当前浏览器中的全部测试记录？')) return;
+        testHistory = [];
+        try {
+          localStorage.removeItem(TEST_HISTORY_KEY);
+          historyStorageAvailable = true;
+        } catch (error) {
+          historyStorageAvailable = false;
+        }
+        renderTestHistory();
+      });
+      renderTestHistory();
       if (!apiInput.value.includes('REPLACE-WITH')) checkSandboxConnection();
 
     }

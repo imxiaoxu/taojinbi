@@ -1,0 +1,73 @@
+name: Public deployment acceptance
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  schedule:
+    - cron: "17 1 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-deployment-acceptance
+  cancel-in-progress: true
+
+jobs:
+  public-smoke:
+    name: 18-item public acceptance
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      RENDER_URL: https://coin-game-agent-sandbox-api.onrender.com
+      PAGES_URL: https://coin-game-agent-sandbox.pages.dev
+      EXPECTED_COMMIT_SHA: ${{ github.sha }}
+      SMOKE_REPORT_DIR: artifacts/public-acceptance
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Wait for deployment and run 18 checks
+        shell: bash
+        run: |
+          mkdir -p "$SMOKE_REPORT_DIR"
+          result=1
+          for attempt in $(seq 1 20); do
+            echo "Acceptance attempt ${attempt}/20"
+            if SMOKE_ATTEMPT="$attempt" node deployment/public_smoke_test.mjs; then
+              result=0
+              break
+            fi
+            if [ "$attempt" -lt 20 ]; then
+              echo "Deployment is not ready yet; retrying in 30 seconds."
+              sleep 30
+            fi
+          done
+          exit "$result"
+
+      - name: Publish report in job summary
+        if: always()
+        shell: bash
+        run: |
+          if [ -f "$SMOKE_REPORT_DIR/public-smoke-report.md" ]; then
+            cat "$SMOKE_REPORT_DIR/public-smoke-report.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No acceptance report was generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Archive acceptance report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-acceptance-${{ github.run_number }}-${{ github.sha }}
+          path: artifacts/public-acceptance/
+          if-no-files-found: error
+          retention-days: 90
